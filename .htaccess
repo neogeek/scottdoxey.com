@@ -1,0 +1,26 @@
+# .htaccess Setup File
+AddDefaultCharset UTF-8
+AddLanguage en-US .php .html .css .js
+
+# Default File
+DirectoryIndex index.html index.php
+
+# Compression
+<FilesMatch "\.(js|css|html|php)$">
+	SetOutputFilter DEFLATE
+</FilesMatch>
+
+# ETags
+FileETag Size
+
+# File Expiration Header
+<Ifmodule mod_expires.c>
+	<Filesmatch "\.(js|css|jpg|jpeg|gif|png|ico)$">
+		ExpiresActive on
+		ExpiresDefault "access plus 10 years"
+	</Filesmatch>
+</Ifmodule>
+
+RewriteEngine On
+
+RewriteRule ^images/(.*)$ http://scottdoxey.s3.amazonaws.com/images/$1
