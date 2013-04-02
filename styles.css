@@ -1,0 +1,77 @@
+* {
+	margin: 0; padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'adelle-1', 'adelle-2', serif;
+	font-size: 10px;
+	color: #fff;
+	line-height: 1.3em;
+	background: rgb(141, 159, 173) url('http://scottdoxey.s3.amazonaws.com/images/me.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: font-size .1s linear;
+	-moz-transition: font-size .1s linear;
+	-o-transition: font-size .1s linear;
+	transition: font-size .1s linear;
+}
+
+h1 {
+	margin: 0 0 30px 0;
+	font-size: 3.75em;
+	line-height: 1.1em;
+	font-weight: normal;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+p {
+	margin: 0 0 20px 0;
+	font-size: 1.9em;
+	line-height: 1.3em;
+	color: #999;
+}
+
+p small {
+	font-size: 80%;
+	line-height: 1em;
+}
+
+a:hover {
+	border-bottom: 3px solid #fff;
+}
+
+#content {
+	margin: 20px;
+	padding: 30px 30px 10px 30px;
+	background: rgba(0, 0, 0, 0.75);
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (min-width: 570px) {
+	
+	body {
+		font-size: 16px;
+	}
+	
+	p small {
+		font-size: 60%;
+		line-height: 1em;
+	}
+	
+	#content {
+		padding: 40px 40px 20px 40px;
+		width: 540px;
+		float: right;
+	}
+	
+}
