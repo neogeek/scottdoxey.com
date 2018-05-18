@@ -1,3 +1,8 @@
+:root {
+    --main-bg-color: #F66188;;
+  }
+
+
 html {
     box-sizing: border-box;
 }
@@ -17,7 +22,7 @@ body {
 }
 
 a {
-    color: #F66188;
+    color: var(--main-bg-color);
 }
 
 p {
@@ -28,7 +33,7 @@ mark {
     margin: -0.2em 0;
     padding: 0.2em;
     color: inherit;
-    background-color: #F56189;
+    background-color: var(--main-bg-color);
     text-shadow: none;
 }
 
