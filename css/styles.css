@@ -19,6 +19,7 @@ body {
     font-size: 1em;
     line-height: 1.2;
     color: #222;
+    background-color: #fff;
 }
 
 a {
@@ -33,6 +34,26 @@ img,
 video {
     max-width: 100%;
     height: auto;
+}
+
+input,
+button {
+    margin: 0.25rem;
+    font-family: sans-serif;
+    font-size: inherit;
+    line-height: 1;
+}
+
+input {
+    padding: 0.5rem;
+}
+
+button {
+    padding: 0.75rem 1rem;
+    color: #fff;
+    background-color: var(--main-bg-color);
+    border: 0;
+    cursor: pointer;
 }
 
 .page-header {
@@ -71,9 +92,11 @@ video {
 }
 
 .page-wrapper {
+    margin: 3rem auto;
     padding: 1.5em;
     font-size: 5vw;
     line-height: 1.4;
+    max-width: 70rem;
 }
 
 @media (min-width: 48rem) {
@@ -126,4 +149,8 @@ video {
     background-color: var(--main-bg-color);
     vertical-align: middle;
     border-radius: 0.4em;
+}
+
+.newsletter-signup-form {
+    text-align: center;
 }
