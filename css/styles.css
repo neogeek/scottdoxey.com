@@ -92,7 +92,7 @@ button {
 }
 
 .page-wrapper {
-    margin: 3rem auto;
+    margin: 0 auto;
     padding: 1.5em;
     font-size: 5vw;
     line-height: 1.4;
@@ -106,8 +106,16 @@ button {
     }
 }
 
+.page-section {
+    margin: 5rem 0;
+}
+
+.page-section h2 {
+    font-size: 1.8rem;
+}
+
 .project {
-    margin: 2rem 0;
+    margin: 2rem 0 4rem;
 }
 
 .project--header {
@@ -117,7 +125,7 @@ button {
 
 .project--subheader {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.4em;
     line-height: 1.2;
 }
 
