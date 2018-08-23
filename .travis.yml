@@ -1,5 +1,12 @@
+language: generic
+install: skip
+script: skip
 deploy:
   provider: s3
   access_key_id: $ACCESS_KEY_ID
   secret_access_key: $ACCESS_KEY
   bucket: scottdoxey.com
+  skip_cleanup: true
+  acl: public_read
+  on:
+    branch: master
