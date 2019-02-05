@@ -1,401 +1,657 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <title>
+            Scott Doxey — Web Designer &amp; Developer / Game Programmer
+        </title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Rubik:400,500"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1">
-    <title>Scott Doxey — Web Designer &amp; Developer / Game Programmer</title>
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+        <link rel="image_src" href="https://scottdoxey.com/images/icon.jpg" />
+        <link rel="apple-touch-icon" href="./images/icon.jpg" />
 
-    <link rel="image_src" href="https://scottdoxey.com/images/icon.jpg">
-    <link rel="apple-touch-icon" href="./images/icon.jpg">
+        <meta
+            name="description"
+            content="Welcome to my online portfolio where I showcase all of my most recent work in the game development space."
+        />
+        <meta
+            name="twitter:description"
+            content="Welcome to my online portfolio where I showcase all of my most recent work in the game development space."
+        />
 
-    <meta name="description" content="Welcome to my online portfolio where I showcase all of my most recent work in the game development space.">
-    <meta name="twitter:description" content="Welcome to my online portfolio where I showcase all of my most recent work in the game development space.">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="neogeek" />
+        <meta name="twitter:creator" content="neogeek" />
+        <meta
+            name="twitter:title"
+            content="Hi! My name is Scott. I make websites, games and open source stuff."
+        />
+        <meta name="twitter:domain" content="https://scottdoxey.com/" />
+        <meta
+            name="twitter:image:src"
+            content="https://scottdoxey.com/images/icon.jpg"
+        />
+    </head>
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="neogeek">
-    <meta name="twitter:creator" content="neogeek">
-    <meta name="twitter:title" content="Hi! My name is Scott. I make websites, games and open source stuff.">
-    <meta name="twitter:domain" content="https://scottdoxey.com/">
-    <meta name="twitter:image:src" content="https://scottdoxey.com/images/icon.jpg">
+    <body>
+        <header class="page-header">
+            <h1>
+                Hi! My name is Scott. I make <mark>websites</mark>,
+                <mark>games</mark> and <mark>open source</mark> stuff.
+            </h1>
+        </header>
 
-</head>
+        <main class="page-wrapper">
+            <section class="page-section">
+                <h1 class="page-section--header">About Me</h1>
 
-<body>
-
-    <header class="page-header">
-
-        <h1>Hi! My name is Scott. I make
-            <mark>websites</mark>,
-            <mark>games</mark> and
-            <mark>open source</mark> stuff.</h1>
-
-    </header>
-
-    <main class="page-wrapper">
-
-        <section class="page-section">
-
-            <h1 class="page-section--header">About Me</h1>
-
-            <p>By day I am a web designer and developer, by night I'm an aspiring* game developer. I've been teaching myself
-                Unity for a little over a year and have built some fun prototypes, none of which have been released to the
-                public. However, while working on these prototypes, I've amassed an extensive collection of reusable components
-                which I've published on the Unity Asset Store.</p>
-
-            <p>
-                <small>*I'll remove this once I've released something</small>
-            </p>
-
-        </section>
-
-        <section class="page-section">
-
-            <h1 class="page-section--header">Recent Projects</h1>
-
-            <article class="project" id="flipjacks">
-
-                <h1 class="project--header">Flip Jacks</h1>
-
-                <p class="project--subheader">
-                    <a href="https://flipjacksgame.com/">flipjacksgame.com</a> /
-                    <a href="https://twitter.com/@flipjacksgame">@flipjacksgame</a>
-                    <span class="platform-badge platform-badge--ios">iOS</span>
-                    <span class="platform-badge platform-badge--android">Android</span>
-                    <span class="platform-badge platform-badge--ar">AR</span>
+                <p>
+                    By day I am a web designer and developer, by night I'm an
+                    aspiring* game developer. I've been teaching myself Unity
+                    for a little over a year and have built some fun prototypes,
+                    none of which have been released to the public. However,
+                    while working on these prototypes, I've amassed an extensive
+                    collection of reusable components which I've published on
+                    the Unity Asset Store.
                 </p>
 
-                <p class="project--description">Flip Jacks is physics based poker in AR. In this game, you rely on speed
-                    and luck, rather than betting and bluffing. For this reason, Flip Jacks can be enjoyed by those who don't
-                    like or know anything about poker. The AR component of Flip Jacks allows you to throw digital cards on
-                    to a table in the real world. The goal of the game is to make a better hand than your opponent by playing
-                    or discarding the cards in front of you.</p>
-
-                <div class="project-videos">
-
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/flip-jacks/flip-jacks-title-hd.jpg">
-                        <source src="./images/projects/flip-jacks/flip-jacks-title-hd.mp4" type="video/mp4">
-                        <source src="./images/projects/flip-jacks/flip-jacks-title-hd.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/1hM7Uh4H8OjAGdG9B1/giphy.gif">
-                    </video>
-
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/flip-jacks/flip-jacks-gameplay-hd.jpg">
-                        <source src="./images/projects/flip-jacks/flip-jacks-gameplay-hd.mp4" type="video/mp4">
-                        <source src="./images/projects/flip-jacks/flip-jacks-gameplay-hd.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/kWFd1XgE1B85Qb52RW/giphy.gif">
-                    </video>
-
-                </div>
-
-                <footer class="project--footer">
-
-                    <h4 class="project--additional-links-header">Additional Links</h4>
-
-                    <ul class="project--additional-links">
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=3MRXPp0izLE">BostonFIG Submission Video</a>
-                        </li>
-                    </ul>
-
-                </footer>
-
-            </article>
-
-            <article class="project" id="candycoded">
-
-                <h1 class="project--header">CandyCoded</h1>
-
-                <p class="project--subheader">
-                    <a href="https://assetstore.unity.com/packages/tools/animation/candycoded-115239">Unity Asset Store</a>
-                    <span class="platform-badge platform-badge--unity">Unity</span>
-                    <span class="platform-badge platform-badge--csharp">C#</span>
+                <p>
+                    <small
+                        >*I'll remove this once I've released something</small
+                    >
                 </p>
+            </section>
 
-                <p class="project--description">CandyCoded is a collection of useful components and extensions for building
-                    in Unity. Whether you are building a quick prototype or a production-ready experience, CandyCoded will
-                    help you get there.</p>
+            <section class="page-section">
+                <h1 class="page-section--header">Recent Projects</h1>
 
-                <div class="project-videos">
+                <article class="project" id="flipjacks">
+                    <h1 class="project--header">Flip Jacks</h1>
 
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/candycoded/candycoded-animate-hd.jpg">
-                        <source src="./images/projects/candycoded/candycoded-animate-hd.mp4" type="video/mp4">
-                        <source src="./images/projects/candycoded/candycoded-animate-hd.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/2yzgQQL49FbpuXfdm8/giphy.gif">
-                    </video>
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/candycoded/candycoded-raycastreflect-hd.jpg">
-                        <source src="./images/projects/candycoded/candycoded-raycastreflect-hd.mp4" type="video/mp4">
-                        <source src="./images/projects/candycoded/candycoded-raycastreflect-hd.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/i2sUlycbAXVryppIkw/giphy.gif">
-                    </video>
+                    <p class="project--subheader">
+                        <a href="https://flipjacksgame.com/"
+                            >flipjacksgame.com</a
+                        >
+                        /
+                        <a href="https://twitter.com/@flipjacksgame"
+                            >@flipjacksgame</a
+                        >
+                        <span class="platform-badge platform-badge--ios"
+                            >iOS</span
+                        >
+                        <span class="platform-badge platform-badge--android"
+                            >Android</span
+                        >
+                        <span class="platform-badge platform-badge--ar"
+                            >AR</span
+                        >
+                    </p>
 
+                    <p class="project--description">
+                        Flip Jacks is physics based poker in AR. In this game,
+                        you rely on speed and luck, rather than betting and
+                        bluffing. For this reason, Flip Jacks can be enjoyed by
+                        those who don't like or know anything about poker. The
+                        AR component of Flip Jacks allows you to throw digital
+                        cards on to a table in the real world. The goal of the
+                        game is to make a better hand than your opponent by
+                        playing or discarding the cards in front of you.
+                    </p>
+
+                    <div class="project-videos">
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/flip-jacks/flip-jacks-title-hd.jpg"
+                        >
+                            <source
+                                src="./images/projects/flip-jacks/flip-jacks-title-hd.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/flip-jacks/flip-jacks-title-hd.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/1hM7Uh4H8OjAGdG9B1/giphy.gif"
+                            />
+                        </video>
+
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/flip-jacks/flip-jacks-gameplay-hd.jpg"
+                        >
+                            <source
+                                src="./images/projects/flip-jacks/flip-jacks-gameplay-hd.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/flip-jacks/flip-jacks-gameplay-hd.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/kWFd1XgE1B85Qb52RW/giphy.gif"
+                            />
+                        </video>
+                    </div>
+
+                    <footer class="project--footer">
+                        <h4 class="project--additional-links-header">
+                            Additional Links
+                        </h4>
+
+                        <ul class="project--additional-links">
+                            <li>
+                                <a
+                                    href="https://www.youtube.com/watch?v=3MRXPp0izLE"
+                                    >BostonFIG Submission Video</a
+                                >
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+
+                <article class="project" id="candycoded">
+                    <h1 class="project--header">CandyCoded</h1>
+
+                    <p class="project--subheader">
+                        <a
+                            href="https://assetstore.unity.com/packages/tools/animation/candycoded-115239"
+                            >Unity Asset Store</a
+                        >
+                        <span class="platform-badge platform-badge--unity"
+                            >Unity</span
+                        >
+                        <span class="platform-badge platform-badge--csharp"
+                            >C#</span
+                        >
+                    </p>
+
+                    <p class="project--description">
+                        CandyCoded is a collection of useful components and
+                        extensions for building in Unity. Whether you are
+                        building a quick prototype or a production-ready
+                        experience, CandyCoded will help you get there.
+                    </p>
+
+                    <div class="project-videos">
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/candycoded/candycoded-animate-hd.jpg"
+                        >
+                            <source
+                                src="./images/projects/candycoded/candycoded-animate-hd.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/candycoded/candycoded-animate-hd.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/2yzgQQL49FbpuXfdm8/giphy.gif"
+                            />
+                        </video>
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/candycoded/candycoded-raycastreflect-hd.jpg"
+                        >
+                            <source
+                                src="./images/projects/candycoded/candycoded-raycastreflect-hd.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/candycoded/candycoded-raycastreflect-hd.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/i2sUlycbAXVryppIkw/giphy.gif"
+                            />
+                        </video>
+                    </div>
+
+                    <footer class="project--footer">
+                        <h4 class="project--additional-links-header">
+                            Additional Links
+                        </h4>
+
+                        <ul class="project--additional-links">
+                            <li>
+                                <a href="https://github.com/neogeek/CandyCoded"
+                                    >GitHub Repo</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://medium.com/@neogeek/candycoded-first-public-beta-579236197b40"
+                                    >Announcement blog post</a
+                                >
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+
+                <article class="project" id="topdown">
+                    <h1 class="project--header">Top Down</h1>
+
+                    <p class="project--subheader">
+                        <a href="https://topdown.app/">topdown.app</a>
+                        <span class="platform-badge platform-badge--web"
+                            >Web</span
+                        >
+                        <span class="platform-badge platform-badge--react"
+                            >React</span
+                        >
+                        <span class="platform-badge platform-badge--pwa"
+                            >PWA</span
+                        >
+                    </p>
+
+                    <p class="project--description">
+                        Top Down is a simple, read-only, Trello board aggregator
+                        built in React.
+                    </p>
+
+                    <div class="project-images">
+                        <img
+                            src="./images/projects/top-down/top-down-login.jpg"
+                            width="500"
+                            height="280"
+                        />
+                        <img
+                            src="./images/projects/top-down/top-down-boards.jpg"
+                            width="500"
+                            height="280"
+                        />
+                    </div>
+                </article>
+
+                <article class="project" id="topdown">
+                    <h1 class="project--header">LumberLogs</h1>
+
+                    <p class="project--subheader">
+                        <a href="https://github.com/neogeek/lumber-logs"
+                            >github.com/neogeek/lumber-logs</a
+                        >
+                        <span class="platform-badge platform-badge--web"
+                            >Web</span
+                        >
+                        <span class="platform-badge platform-badge--react"
+                            >React</span
+                        >
+                        <span class="platform-badge platform-badge--desktop-app"
+                            >Desktop App</span
+                        >
+                    </p>
+
+                    <p class="project--description">
+                        A desktop app log aggregation tool.
+                    </p>
+
+                    <div class="project-images">
+                        <img
+                            src="./images/projects/lumber-logs/screennshot-macos-app.jpg"
+                            width="500"
+                            height="280"
+                        />
+                    </div>
+
+                    <footer class="project--footer">
+                        <p>Coming soon</p>
+                    </footer>
+                </article>
+
+                <article class="project" id="golf-game">
+                    <h1 class="project--header">Golf Game</h1>
+
+                    <p class="project--subheader">
+                        <span class="platform-badge platform-badge--ios"
+                            >iOS</span
+                        >
+                        <span class="platform-badge platform-badge--android"
+                            >Android</span
+                        >
+                        <span class="platform-badge platform-badge--ar"
+                            >AR</span
+                        >
+                    </p>
+
+                    <p class="project--description">
+                        An untitled golf game that is played primarily in AR.
+                        Some levels would be pre-built, while others could be
+                        generated based on the real world environment around the
+                        player.
+                    </p>
+
+                    <div class="project-videos">
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/golf-game/golf-game-title.jpg"
+                        >
+                            <source
+                                src="./images/projects/golf-game/golf-game-title.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/golf-game/golf-game-title.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/1dNlWhm0HKKwhtcX9R/giphy.gif"
+                            />
+                        </video>
+
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/golf-game/golf-game-demo.jpg"
+                        >
+                            <source
+                                src="./images/projects/golf-game/golf-game-demo.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/golf-game/golf-game-demo.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/mx0ToC0SyMLTsc0wox/giphy.gif"
+                            />
+                        </video>
+                    </div>
+
+                    <footer class="project--footer">
+                        <p>Coming soon</p>
+                    </footer>
+                </article>
+
+                <article class="project" id="smoothie-operator">
+                    <h1 class="project--header">
+                        Smoothie Operator (Unity Port)
+                    </h1>
+
+                    <p class="project--subheader">
+                        <span class="platform-badge platform-badge--webgl"
+                            >WebGL</span
+                        >
+                    </p>
+
+                    <p class="project--description">
+                        In the not-so distant future where food trucks are in
+                        such high demand that they needed to take to the skies,
+                        people do whatever they can to place orders for
+                        smoothies. Whether it's by jetpack, grappling hooks or
+                        their natural ability to fly, people are placing a lot
+                        of orders. Your job, as this flying food truck's only
+                        robotic blender, is to fulfill as many orders as you can
+                        before too many customers get angry and leave.
+                    </p>
+
+                    <div class="project-videos">
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/smoothie-operator/smoothie-operator-hd.jpg"
+                        >
+                            <source
+                                src="./images/projects/smoothie-operator/smoothie-operator-hd.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/smoothie-operator/smoothie-operator-hd.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/oOBsI9THZmgFoEwoMl/giphy.gif"
+                            />
+                        </video>
+                    </div>
+
+                    <footer class="project--footer">
+                        <h4 class="project--additional-links-header">
+                            Additional Links
+                        </h4>
+
+                        <ul class="project--additional-links">
+                            <li>
+                                <a
+                                    href="https://neogeek.itch.io/smoothie-operator"
+                                    >Itch.io Game Page (HTML5 Version)</a
+                                >
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+
+                <article class="project" id="fractal-visualizer">
+                    <h1 class="project--header">Fractal Visualizer</h1>
+
+                    <p class="project--subheader">
+                        <span class="platform-badge platform-badge--vr"
+                            >VR</span
+                        >
+                    </p>
+
+                    <p class="project--description">
+                        An untitled fractal visualizer that will place you in a
+                        void with the ability to create and interact with
+                        fractals generated using the chaos game method. Once
+                        built, the fractals will react not only to your
+                        interactions but the accompanying music.
+                    </p>
+
+                    <div class="project-videos">
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/fractal-visualizer/fractal-visualizer-hd.jpg"
+                        >
+                            <source
+                                src="./images/projects/fractal-visualizer/fractal-visualizer-hd.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/fractal-visualizer/fractal-visualizer-hd.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/1kWJjHyfJH6yTQ8JfW/giphy.gif"
+                            />
+                        </video>
+                    </div>
+
+                    <footer class="project--footer">
+                        <p>Coming soon</p>
+                    </footer>
+                </article>
+
+                <article class="project" id="endless-runner">
+                    <h1 class="project--header">Endless Runner</h1>
+
+                    <p class="project--subheader">
+                        <span class="platform-badge platform-badge--ios"
+                            >iOS</span
+                        >
+                        <span class="platform-badge platform-badge--android"
+                            >Android</span
+                        >
+                    </p>
+
+                    <p class="project--description">
+                        This untitled endless runner is a game and a
+                        learning/teaching tool. It will be released on both the
+                        iOS App Store and Android Google Play Store. The source
+                        code will be available on GitHub with an accompanying
+                        video series on how to build an endless runner from
+                        scratch.
+                    </p>
+
+                    <div class="project-videos">
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/endless-runner/endless-runner-hd.jpg"
+                        >
+                            <source
+                                src="./images/projects/endless-runner/endless-runner-hd.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/endless-runner/endless-runner-hd.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/fxOgyBCC6tB4NKJnhd/giphy.gif"
+                            />
+                        </video>
+                    </div>
+
+                    <footer class="project--footer">
+                        <p>Coming soon</p>
+                    </footer>
+                </article>
+            </section>
+
+            <section class="page-section">
+                <h1 class="page-section--header">Random Prototypes</h1>
+
+                <div class="project" id="random-prototypes">
+                    <div class="project-videos">
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/prototypes/hover-car-prototype.jpg"
+                        >
+                            <source
+                                src="./images/projects/prototypes/hover-car-prototype.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/prototypes/hover-car-prototype.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/2wh2uBupFw6jgqQRtp/giphy.gif"
+                            />
+                        </video>
+
+                        <video
+                            width="500"
+                            height="280"
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            poster="./images/projects/prototypes/scott-pilgrim-prototype.jpg"
+                        >
+                            <source
+                                src="./images/projects/prototypes/scott-pilgrim-prototype.mp4"
+                                type="video/mp4"
+                            />
+                            <source
+                                src="./images/projects/prototypes/scott-pilgrim-prototype.webm"
+                                type="video/webm"
+                                onerror="fallback(parentNode)"
+                            />
+                            <img
+                                src="https://media.giphy.com/media/1xVfIs6n67SsG8Fc5n/giphy.gif"
+                            />
+                        </video>
+                    </div>
                 </div>
+            </section>
+        </main>
 
-                <footer class="project--footer">
-
-                    <h4 class="project--additional-links-header">Additional Links</h4>
-
-                    <ul class="project--additional-links">
-                        <li>
-                            <a href="https://github.com/neogeek/CandyCoded">GitHub Repo</a>
-                        </li>
-                        <li>
-                            <a href="https://medium.com/@neogeek/candycoded-first-public-beta-579236197b40">Announcement
-                                blog post</a>
-                        </li>
-                    </ul>
-
-                </footer>
-
-            </article>
-
-            <article class="project" id="topdown">
-
-                <h1 class="project--header">Top Down</h1>
-
-                <p class="project--subheader">
-                    <a href="https://topdown.app/">topdown.app</a>
-                    <span class="platform-badge platform-badge--web">Web</span>
-                    <span class="platform-badge platform-badge--react">React</span>
-                    <span class="platform-badge platform-badge--pwa">PWA</span>
+        <footer class="page-wrapper">
+            <form
+                class="newsletter-signup-form"
+                action="https://tinyletter.com/scottdoxey"
+                method="post"
+                target="popupwindow"
+                onsubmit="window.open('https://tinyletter.com/scottdoxey', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+            >
+                <input type="hidden" value="1" name="embed" />
+                <p>
+                    <label for="tlemail"
+                        >Enter your email address to recieve updates about my
+                        projects:</label
+                    >
                 </p>
-
-                <p class="project--description">Top Down is a simple, read-only, Trello board aggregator built in React.</p>
-
-                <div class="project-images">
-
-                    <img src="./images/projects/top-down/top-down-login.jpg" width="500" height="280">
-                    <img src="./images/projects/top-down/top-down-boards.jpg" width="500" height="280">
-
-                </div>
-
-            </article>
-
-            <article class="project" id="topdown">
-
-                <h1 class="project--header">LumberLogs</h1>
-
-                <p class="project--subheader">
-                    <a href="https://github.com/neogeek/lumber-logs">github.com/neogeek/lumber-logs</a>
-                    <span class="platform-badge platform-badge--web">Web</span>
-                    <span class="platform-badge platform-badge--react">React</span>
-                    <span class="platform-badge platform-badge--desktop-app">Desktop App</span>
+                <p>
+                    <input type="text" name="email" id="tlemail" />
+                    <button type="submit">Subscribe</button>
                 </p>
-
-                <p class="project--description">A desktop app log aggregation tool.</p>
-
-                <div class="project-images">
-
-                    <img src="./images/projects/lumber-logs/screennshot-macos-app.jpg" width="500" height="280">
-
-                </div>
-
-                <footer class="project--footer">
-
-                    <p>Coming soon</p>
-
-                </footer>
-
-            </article>
-
-            <article class="project" id="golf-game">
-
-                <h1 class="project--header">Golf Game</h1>
-
-                <p class="project--subheader">
-                    <span class="platform-badge platform-badge--ios">iOS</span>
-                    <span class="platform-badge platform-badge--android">Android</span>
-                    <span class="platform-badge platform-badge--ar">AR</span>
+                <p>
+                    <a href="https://tinyletter.com" target="_blank">
+                        <small>powered by TinyLetter</small>
+                    </a>
                 </p>
+            </form>
+        </footer>
 
-                <p class="project--description">An untitled golf game that is played primarily in AR. Some levels would be
-                    pre-built, while others could be generated based on the real world environment around the player.</p>
-
-                <div class="project-videos">
-
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/golf-game/golf-game-title.jpg">
-                        <source src="./images/projects/golf-game/golf-game-title.mp4" type="video/mp4">
-                        <source src="./images/projects/golf-game/golf-game-title.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/1dNlWhm0HKKwhtcX9R/giphy.gif">
-                    </video>
-
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/golf-game/golf-game-demo.jpg">
-                        <source src="./images/projects/golf-game/golf-game-demo.mp4" type="video/mp4">
-                        <source src="./images/projects/golf-game/golf-game-demo.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/mx0ToC0SyMLTsc0wox/giphy.gif">
-                    </video>
-
-                </div>
-
-                <footer class="project--footer">
-
-                    <p>Coming soon</p>
-
-                </footer>
-
-            </article>
-
-            <article class="project" id="smoothie-operator">
-
-                <h1 class="project--header">Smoothie Operator (Unity Port)</h1>
-
-                <p class="project--subheader">
-                    <span class="platform-badge platform-badge--webgl">WebGL</span>
-                </p>
-
-                <p class="project--description">In the not-so distant future where food trucks are in such high demand that
-                    they needed to take to the skies, people do whatever they can to place orders for smoothies. Whether
-                    it's by jetpack, grappling hooks or their natural ability to fly, people are placing a lot of orders.
-                    Your job, as this flying food truck's only robotic blender, is to fulfill as many orders as you can before
-                    too many customers get angry and leave.
-                </p>
-
-                <div class="project-videos">
-
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/smoothie-operator/smoothie-operator-hd.jpg">
-                        <source src="./images/projects/smoothie-operator/smoothie-operator-hd.mp4" type="video/mp4">
-                        <source src="./images/projects/smoothie-operator/smoothie-operator-hd.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/oOBsI9THZmgFoEwoMl/giphy.gif">
-                    </video>
-
-                </div>
-
-                <footer class="project--footer">
-
-                    <h4 class="project--additional-links-header">Additional Links</h4>
-
-                    <ul class="project--additional-links">
-                        <li>
-                            <a href="https://neogeek.itch.io/smoothie-operator">Itch.io Game Page (HTML5 Version)</a>
-                        </li>
-                    </ul>
-
-                </footer>
-
-            </article>
-
-            <article class="project" id="fractal-visualizer">
-
-                <h1 class="project--header">Fractal Visualizer</h1>
-
-                <p class="project--subheader">
-                    <span class="platform-badge platform-badge--vr">VR</span>
-                </p>
-
-                <p class="project--description">An untitled fractal visualizer that will place you in a void with the ability
-                    to create and interact with fractals generated using the chaos game method. Once built, the fractals
-                    will react not only to your interactions but the accompanying music.</p>
-
-                <div class="project-videos">
-
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/fractal-visualizer/fractal-visualizer-hd.jpg">
-                        <source src="./images/projects/fractal-visualizer/fractal-visualizer-hd.mp4" type="video/mp4">
-                        <source src="./images/projects/fractal-visualizer/fractal-visualizer-hd.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/1kWJjHyfJH6yTQ8JfW/giphy.gif">
-                    </video>
-
-                </div>
-
-                <footer class="project--footer">
-
-                    <p>Coming soon</p>
-
-                </footer>
-
-            </article>
-
-            <article class="project" id="endless-runner">
-
-                <h1 class="project--header">Endless Runner</h1>
-
-                <p class="project--subheader">
-                    <span class="platform-badge platform-badge--ios">iOS</span>
-                    <span class="platform-badge platform-badge--android">Android</span>
-                </p>
-
-                <p class="project--description">This untitled endless runner is a game and a learning/teaching tool. It will
-                    be released on both the iOS App Store and Android Google Play Store. The source code will be available
-                    on GitHub with an accompanying video series on how to build an endless runner from scratch.</p>
-
-                <div class="project-videos">
-
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/endless-runner/endless-runner-hd.jpg">
-                        <source src="./images/projects/endless-runner/endless-runner-hd.mp4" type="video/mp4">
-                        <source src="./images/projects/endless-runner/endless-runner-hd.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/fxOgyBCC6tB4NKJnhd/giphy.gif">
-                    </video>
-
-                </div>
-
-                <footer class="project--footer">
-
-                    <p>Coming soon</p>
-
-                </footer>
-
-            </article>
-
-        </section>
-
-        <section class="page-section">
-
-            <h1 class="page-section--header">Random Prototypes</h1>
-
-            <div class="project" id="random-prototypes">
-
-                <div class="project-videos">
-
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/prototypes/hover-car-prototype.jpg">
-                        <source src="./images/projects/prototypes/hover-car-prototype.mp4" type="video/mp4">
-                        <source src="./images/projects/prototypes/hover-car-prototype.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/2wh2uBupFw6jgqQRtp/giphy.gif">
-                    </video>
-
-                    <video width="500" height="280" autoplay loop muted playinline poster="./images/projects/prototypes/scott-pilgrim-prototype.jpg">
-                        <source src="./images/projects/prototypes/scott-pilgrim-prototype.mp4" type="video/mp4">
-                        <source src="./images/projects/prototypes/scott-pilgrim-prototype.webm" type="video/webm" onerror="fallback(parentNode)">
-                        <img src="https://media.giphy.com/media/1xVfIs6n67SsG8Fc5n/giphy.gif">
-                    </video>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer class="page-wrapper">
-
-        <form class="newsletter-signup-form" action="https://tinyletter.com/scottdoxey" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/scottdoxey', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-            <input type="hidden" value="1" name="embed" />
-            <p>
-                <label for="tlemail">Enter your email address to recieve updates about my projects:</label>
-            </p>
-            <p>
-                <input type="text" name="email" id="tlemail" />
-                <button type="submit">Subscribe</button>
-            </p>
-            <p>
-                <a href="https://tinyletter.com" target="_blank">
-                    <small>powered by TinyLetter</small>
-                </a>
-            </p>
-        </form>
-
-    </footer>
-
-    <script>
-
-        function fallback(video) {
-            var img = video.querySelector('img');
-            if (img)
-                video.parentNode.replaceChild(img, video);
-        }
-
-    </script>
-
-</body>
-
+        <script>
+            function fallback(video) {
+                var img = video.querySelector('img');
+                if (img) video.parentNode.replaceChild(img, video);
+            }
+        </script>
+    </body>
 </html>
