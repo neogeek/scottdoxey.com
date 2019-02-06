@@ -1,0 +1,202 @@
+{
+    "projects": [
+        {
+            "displayName": "Flip Jacks",
+            "links": [
+                {
+                    "href": "https://flipjacksgame.com/",
+                    "name": "flipjacksgame.com"
+                },
+                {
+                    "href": "https://twitter.com/@flipjacksgame",
+                    "name": "@flipjacksgame"
+                }
+            ],
+            "tags": ["iOS", "Android", "AR"],
+            "description": "Flip Jacks is physics based poker in AR. In this game, you rely on speed and luck, rather than betting and bluffing. For this reason, Flip Jacks can be enjoyed by those who don't like or know anything about poker. The AR component of Flip Jacks allows you to throw digital cards on to a table in the real world. The goal of the game is to make a better hand than your opponent by playing or discarding the cards in front of you.",
+            "videos": [
+                {
+                    "poster": "./images/projects/flip-jacks/flip-jacks-title-hd.jpg",
+                    "sources": [
+                        "./images/projects/flip-jacks/flip-jacks-title-hd.mp4",
+                        "./images/projects/flip-jacks/flip-jacks-title-hd.webm"
+                    ]
+                },
+                {
+                    "poster": "./images/projects/flip-jacks/flip-jacks-gameplay-hd.jpg",
+                    "sources": [
+                        "./images/projects/flip-jacks/flip-jacks-gameplay-hd.mp4",
+                        "./images/projects/flip-jacks/flip-jacks-gameplay-hd.webm"
+                    ]
+                }
+            ],
+            "additionalLinks": [
+                {
+                    "href": "https://www.youtube.com/watch?v=3MRXPp0izLE",
+                    "name": "BostonFIG Submission Video"
+                }
+            ]
+        },
+        {
+            "displayName": "CandyCoded",
+            "links": [
+                {
+                    "href": "https://assetstore.unity.com/packages/tools/animation/candycoded-115239",
+                    "name": "Unity Asset Store"
+                },
+                {
+                    "href": "https://github.com/CandyCoded/CandyCoded",
+                    "name": "github.com/CandyCoded/CandyCoded"
+                }
+            ],
+            "tags": ["Unity", "C Sharp", "Open Source"],
+            "description": "CandyCoded is a collection of useful components and extensions for building in Unity. Whether you are building a quick prototype or a production-ready experience, CandyCoded will help you get there.",
+            "videos": [
+                {
+                    "poster": "./images/projects/candycoded/candycoded-animate-hd.jpg",
+                    "sources": [
+                        "./images/projects/candycoded/candycoded-animate-hd.mp4",
+                        "./images/projects/candycoded/candycoded-animate-hd.webm"
+                    ]
+                },
+                {
+                    "poster": "./images/projects/candycoded/candycoded-raycastreflect-hd.jpg",
+                    "sources": [
+                        "./images/projects/candycoded/candycoded-raycastreflect-hd.mp4",
+                        "./images/projects/candycoded/candycoded-raycastreflect-hd.webm"
+                    ]
+                }
+            ],
+            "additionalLinks": [
+                {
+                    "href": "https://medium.com/@neogeek/candycoded-first-public-beta-579236197b40",
+                    "name": "Announcement blog post"
+                }
+            ]
+        },
+        {
+            "displayName": "Top Down",
+            "links": [
+                {
+                    "href": "https://topdown.app/",
+                    "name": "topdown.app"
+                }
+            ],
+            "tags": ["Web", "React", "PWA", "Open Source"],
+            "description": "Top Down is a simple, read-only, Trello board aggregator built in React.",
+            "images": [
+                "./images/projects/top-down/top-down-login.jpg",
+                "./images/projects/top-down/top-down-boards.jpg"
+            ]
+        },
+        {
+            "displayName": "LumberLogs",
+            "links": [
+                {
+                    "href": "https://github.com/neogeek/lumber-logs",
+                    "name": "https://github.com/neogeek/lumber-logs"
+                }
+            ],
+            "tags": ["Web", "React", "Desktop App", "Open Source"],
+            "description": "A desktop app log aggregation tool.",
+            "images": [
+                "./images/projects/lumber-logs/screennshot-macos-app.jpg"
+            ]
+        },
+        {
+            "displayName": "Golf Game",
+            "tags": ["iOS", "Android", "AR"],
+            "description": "An untitled golf game that is played primarily in AR. Some levels would be pre-built, while others could be generated based on the real world environment around the player.",
+            "videos": [
+                {
+                    "poster": "./images/projects/golf-game/golf-game-title.jpg",
+                    "sources": [
+                        "./images/projects/golf-game/golf-game-title.mp4",
+                        "./images/projects/golf-game/golf-game-title.webm"
+                    ]
+                },
+                {
+                    "poster": "./images/projects/golf-game/golf-game-demo.jpg",
+                    "sources": [
+                        "./images/projects/golf-game/golf-game-demo.mp4",
+                        "./images/projects/golf-game/golf-game-demo.webm"
+                    ]
+                }
+            ]
+        },
+        {
+            "displayName": "Smoothie Operator (Unity Port)",
+            "tags": ["WebGL"],
+            "description": "In the not-so distant future where food trucks are in such high demand that they needed to take to the skies, people do whatever they can to place orders for smoothies. Whether it's by jetpack, grappling hooks or their natural ability to fly, people are placing a lot of orders. Your job, as this flying food truck's only robotic blender, is to fulfill as many orders as you can before too many customers get angry and leave.",
+            "videos": [
+                {
+                    "poster": "./images/projects/smoothie-operator/smoothie-operator-hd.jpg",
+                    "sources": [
+                        "./images/projects/smoothie-operator/smoothie-operator-hd.mp4",
+                        "./images/projects/smoothie-operator/smoothie-operator-hd.webm"
+                    ]
+                }
+            ],
+            "additionalLinks": [
+                {
+                    "href": "https://neogeek.itch.io/smoothie-operator",
+                    "name": "Itch.io Game Page (HTML5 Version)"
+                }
+            ]
+        },
+        {
+            "displayName": "Fractal Visualizer",
+            "tags": ["VR"],
+            "description": "An untitled fractal visualizer that will place you in a void with the ability to create and interact with fractals generated using the chaos game method. Once built, the fractals will react not only to your interactions but the accompanying music.",
+            "videos": [
+                {
+                    "poster": "./images/projects/fractal-visualizer/fractal-visualizer-hd.jpg",
+                    "sources": [
+                        "./images/projects/fractal-visualizer/fractal-visualizer-hd.mp4",
+                        "./images/projects/fractal-visualizer/fractal-visualizer-hd.webm"
+                    ]
+                }
+            ]
+        },
+        {
+            "displayName": "Endless Runner",
+            "links": [],
+            "tags": ["iOS", "Android", "Open Source"],
+            "description": "This untitled endless runner is a game and a learning/teaching tool. It will be released on both the iOS App Store and Android Google Play Store. The source code will be available on GitHub with an accompanying video series on how to build an endless runner from scratch.",
+            "videos": [
+                {
+                    "poster": "./images/projects/endless-runner/endless-runner-hd.jpg",
+                    "sources": [
+                        "./images/projects/endless-runner/endless-runner-hd.mp4",
+                        "./images/projects/endless-runner/endless-runner-hd.webm"
+                    ]
+                }
+            ],
+            "additionalLinks": []
+        }
+    ],
+    "prototypes": [
+        {
+            "videos": [
+                {
+                    "poster": "./images/projects/prototypes/hover-car-prototype.jpg",
+                    "sources": [
+                        "./images/projects/prototypes/hover-car-prototype.mp4",
+                        "./images/projects/prototypes/hover-car-prototype.webm"
+                    ]
+                }
+            ]
+        },
+        {
+            "videos": [
+                {
+                    "poster": "./images/projects/prototypes/scott-pilgrim-prototype.jpg",
+                    "sources": [
+                        "./images/projects/prototypes/scott-pilgrim-prototype.mp4",
+                        "./images/projects/prototypes/scott-pilgrim-prototype.webm"
+                    ]
+                }
+            ]
+        }
+    ]
+}
