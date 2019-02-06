@@ -160,6 +160,7 @@ button {
     background-color: var(--main-bg-color);
     vertical-align: middle;
     border-radius: 0.4em;
+    white-space: nowrap;
 }
 
 .newsletter-signup-form {
