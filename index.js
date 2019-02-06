@@ -8,7 +8,7 @@ const generateNameHash = displayName =>
 
 const renderLink = ({ href, name }) => `<a href="${href}">${name}</a>`;
 const renderTag = tag =>
-    `<span class="platform-badge platform-badge--${generateNameHash(
+    `<span class="project-badge project-badge--${generateNameHash(
         tag
     )}">${tag}</span>`;
 
