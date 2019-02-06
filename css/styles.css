@@ -24,6 +24,7 @@ body {
 
 a {
     color: var(--main-bg-color);
+    word-break: break-all;
 }
 
 p {
