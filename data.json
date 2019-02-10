@@ -143,7 +143,7 @@
             "tags": ["Web", "React", "Desktop App", "Open Source"],
             "description": "A desktop app log aggregation tool.",
             "images": [
-                "./images/projects/lumber-logs/screennshot-macos-app.jpg"
+                "./images/projects/lumber-logs/lumber-logs-screennshot-macos-app.jpg"
             ]
         },
         {
@@ -152,17 +152,17 @@
             "description": "An untitled golf game that is played primarily in AR. Some levels would be pre-built, while others could be generated based on the real world environment around the player.",
             "videos": [
                 {
-                    "poster": "./images/projects/golf-game/golf-game-title.jpg",
+                    "poster": "./images/projects/untitled-golf-game/golf-game-title.jpg",
                     "sources": [
-                        "./images/projects/golf-game/golf-game-title.mp4",
-                        "./images/projects/golf-game/golf-game-title.webm"
+                        "./images/projects/untitled-golf-game/golf-game-title.mp4",
+                        "./images/projects/untitled-golf-game/golf-game-title.webm"
                     ]
                 },
                 {
-                    "poster": "./images/projects/golf-game/golf-game-demo.jpg",
+                    "poster": "./images/projects/untitled-golf-game/golf-game-demo.jpg",
                     "sources": [
-                        "./images/projects/golf-game/golf-game-demo.mp4",
-                        "./images/projects/golf-game/golf-game-demo.webm"
+                        "./images/projects/untitled-golf-game/golf-game-demo.mp4",
+                        "./images/projects/untitled-golf-game/golf-game-demo.webm"
                     ]
                 }
             ]
@@ -188,15 +188,15 @@
             ]
         },
         {
-            "displayName": "Fractal Visualizer",
+            "displayName": "Untitled Fractal Visualizer",
             "tags": ["VR"],
             "description": "An untitled fractal visualizer that will place you in a void with the ability to create and interact with fractals generated using the chaos game method. Once built, the fractals will react not only to your interactions but the accompanying music.",
             "videos": [
                 {
-                    "poster": "./images/projects/fractal-visualizer/fractal-visualizer-hd.jpg",
+                    "poster": "./images/projects/untitled-fractal-visualizer/fractal-visualizer-hd.jpg",
                     "sources": [
-                        "./images/projects/fractal-visualizer/fractal-visualizer-hd.mp4",
-                        "./images/projects/fractal-visualizer/fractal-visualizer-hd.webm"
+                        "./images/projects/untitled-fractal-visualizer/fractal-visualizer-hd.mp4",
+                        "./images/projects/untitled-fractal-visualizer/fractal-visualizer-hd.webm"
                     ]
                 }
             ]
