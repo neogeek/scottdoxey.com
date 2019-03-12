@@ -13,7 +13,7 @@
                 }
             ],
             "tags": ["iOS", "Android", "AR"],
-            "description": "Flip Jacks is physics based poker in AR. In this game, you rely on speed and luck, rather than betting and bluffing. For this reason, Flip Jacks can be enjoyed by those who don't like or know anything about poker. The AR component of Flip Jacks allows you to throw digital cards on to a table in the real world. The goal of the game is to make a better hand than your opponent by playing or discarding the cards in front of you.",
+            "description": "Flip Jacks is physics based poker in AR. In this game, you rely on speed and luck, rather than betting and bluffing. For this reason, Flip Jacks can be enjoyed by those who don't know anything about (or even like) poker. The AR component of Flip Jacks allows you to throw digital cards on to a table in the real world. The goal of the game is to make a better hand than your opponent by playing or discarding the cards in front of you.",
             "videos": [
                 {
                     "poster": "./images/projects/flip-jacks/flip-jacks-title-hd.jpg",
