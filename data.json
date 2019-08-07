@@ -122,6 +122,21 @@
             "description": "Bridge for requesting state from an iOS device"
         },
         {
+            "displayName": "unity-ci-tools",
+            "links": [
+                {
+                    "href": "https://github.com/neogeek/unity-ci-tools",
+                    "name": "GitHub Repo"
+                }
+            ],
+            "tags": ["Unity", "CI", "Jenkins", "Testing"],
+            "description": "Bash scripts for running Unity tests on continuous integration services",
+            "images": [
+                "./images/projects/unity-ci-tools/unity-ci-tools-github-readme.jpg",
+                "./images/projects/unity-ci-tools/unity-ci-tools-jenkins.jpg"
+            ]
+        },
+        {
             "displayName": "Top Down",
             "links": [
                 {
