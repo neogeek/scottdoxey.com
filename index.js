@@ -1,3 +1,5 @@
+const { readFileSync } = require('fs');
+
 const { projects, prototypes } = require('./data.json');
 
 const generateNameHash = displayName =>
@@ -92,77 +94,11 @@ ${
     }
 </article>`;
 
+process.stdout.write(readFileSync('./includes/header.html'));
+
 process.stdout.write(
     `
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="initial-scale=1" />
-        <title>
-            Scott Doxey — Web Designer &amp; Developer / Game Programmer
-        </title>
-        <link
-            href="https://fonts.googleapis.com/css?family=Rubik:400,500"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./css/styles.css" />
-
-        <link rel="image_src" href="https://scottdoxey.com/images/icon.jpg" />
-        <link rel="apple-touch-icon" href="./images/icon.jpg" />
-
-        <meta
-            name="description"
-            content="Welcome to my online portfolio where I showcase all of my most recent work in the game development space."
-        />
-        <meta
-            name="twitter:description"
-            content="Welcome to my online portfolio where I showcase all of my most recent work in the game development space."
-        />
-
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="neogeek" />
-        <meta name="twitter:creator" content="neogeek" />
-        <meta
-            name="twitter:title"
-            content="Hi! My name is Scott. I make websites, games and open source stuff."
-        />
-        <meta name="twitter:domain" content="https://scottdoxey.com/" />
-        <meta
-            name="twitter:image:src"
-            content="https://scottdoxey.com/images/icon.jpg"
-        />
-    </head>
-
-    <body>
-        <header class="page-header">
-            <h1>
-                Hi! My name is Scott. I make <mark>websites</mark>,
-                <mark>games</mark> and <mark>open source</mark> stuff.
-            </h1>
-        </header>
-
         <main class="page-wrapper">
-            <section class="page-section">
-                <h1 class="page-section--header">About Me</h1>
-
-                <p>
-                    By day I am a web designer and developer, by night I'm an
-                    aspiring* game developer. I've been teaching myself Unity
-                    for a little over a year and have built some fun prototypes,
-                    none of which have been released to the public. However,
-                    while working on these prototypes, I've amassed an extensive
-                    collection of reusable components which I've published on
-                    the Unity Asset Store.
-                </p>
-
-                <p>
-                    <small
-                        >*I'll remove this once I've released something</small
-                    >
-                </p>
-            </section>
-
             <section class="page-section">
                 <h1 class="page-section--header">Recent Projects</h1>
                 ${projects.map(renderProject).join('\n')}
@@ -178,43 +114,8 @@ process.stdout.write(
                     </div>
                 </div>
             </section>
-
         </main>
-
-        <footer class="page-wrapper">
-            <form
-                class="newsletter-signup-form"
-                action="https://tinyletter.com/scottdoxey"
-                method="post"
-                target="popupwindow"
-                onsubmit="window.open('https://tinyletter.com/scottdoxey', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
-            >
-                <input type="hidden" value="1" name="embed" />
-                <p>
-                    <label for="tlemail"
-                        >Enter your email address to recieve updates about my
-                        projects:</label
-                    >
-                </p>
-                <p>
-                    <input type="text" name="email" id="tlemail" />
-                    <button type="submit">Subscribe</button>
-                </p>
-                <p>
-                    <a href="https://tinyletter.com" target="_blank">
-                        <small>powered by TinyLetter</small>
-                    </a>
-                </p>
-            </form>
-        </footer>
-        <script>
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () =>
-                    navigator.serviceWorker.register('/serviceWorker.js')
-                );
-            }
-        </script>
-    </body>
-</html>
 `
 );
+
+process.stdout.write(readFileSync('./includes/footer.html'));
