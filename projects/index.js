@@ -14,18 +14,18 @@ const untitledVRSwordFightingGame = require('./untitled-vr-sword-fighting-game.j
 const xrComponents = require('./xr-components.json');
 
 module.exports = [
-    arfoundationComponents,
-    candycoded,
-    endlessRunner,
     flipJacks,
-    lumberlogs,
-    smoothieOperator,
-    topdown,
-    unityCITools,
-    unityIOSBridge,
-    untitledFractalVisualizer,
-    untitledGolfGame,
     untitledSolitaireGame,
     untitledVRSwordFightingGame,
-    xrComponents
+    candycoded,
+    arfoundationComponents,
+    xrComponents,
+    unityIOSBridge,
+    unityCITools,
+    topdown,
+    lumberlogs,
+    untitledGolfGame,
+    smoothieOperator,
+    untitledFractalVisualizer,
+    endlessRunner
 ];
