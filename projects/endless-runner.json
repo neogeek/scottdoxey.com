@@ -1,0 +1,16 @@
+{
+    "displayName": "Endless Runner",
+    "links": [],
+    "tags": ["iOS", "Android", "Open Source"],
+    "description": "This untitled endless runner is a game and a learning/teaching tool. It will be released on both the iOS App Store and Android Google Play Store. The source code will be available on GitHub with an accompanying video series on how to build an endless runner from scratch.",
+    "videos": [
+        {
+            "poster": "./images/projects/endless-runner/endless-runner-hd.jpg",
+            "sources": [
+                "./images/projects/endless-runner/endless-runner-hd.mp4",
+                "./images/projects/endless-runner/endless-runner-hd.webm"
+            ]
+        }
+    ],
+    "additionalLinks": []
+}

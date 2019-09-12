@@ -1,0 +1,11 @@
+{
+    "displayName": "ARFoundation Components",
+    "links": [
+        {
+            "href": "https://github.com/CandyCoded/ARFoundation-Components",
+            "name": "GitHub Repo"
+        }
+    ],
+    "tags": ["Unity", "AR", "ARKit", "ARCore", "C#", "Open Source"],
+    "description": "Generic components for use with Unity's AR Foundation package."
+}

@@ -1,6 +1,7 @@
 const { readFileSync } = require('fs');
 
-const { projects, prototypes } = require('./data.json');
+const projects = require('./projects');
+const prototypes = require('./prototypes');
 
 const generateNameHash = displayName =>
     displayName

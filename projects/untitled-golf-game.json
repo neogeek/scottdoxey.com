@@ -1,0 +1,21 @@
+{
+    "displayName": "Untitled Golf Game",
+    "tags": ["iOS", "Android", "AR"],
+    "description": "An untitled golf game that is played primarily in AR. Some levels would be pre-built, while others could be generated based on the real world environment around the player.",
+    "videos": [
+        {
+            "poster": "./images/projects/untitled-golf-game/golf-game-title.jpg",
+            "sources": [
+                "./images/projects/untitled-golf-game/golf-game-title.mp4",
+                "./images/projects/untitled-golf-game/golf-game-title.webm"
+            ]
+        },
+        {
+            "poster": "./images/projects/untitled-golf-game/golf-game-demo.jpg",
+            "sources": [
+                "./images/projects/untitled-golf-game/golf-game-demo.mp4",
+                "./images/projects/untitled-golf-game/golf-game-demo.webm"
+            ]
+        }
+    ]
+}

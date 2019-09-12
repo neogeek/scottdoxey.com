@@ -1,0 +1,11 @@
+{
+    "videos": [
+        {
+            "poster": "./images/projects/prototypes/scott-pilgrim-prototype.jpg",
+            "sources": [
+                "./images/projects/prototypes/scott-pilgrim-prototype.mp4",
+                "./images/projects/prototypes/scott-pilgrim-prototype.webm"
+            ]
+        }
+    ]
+}

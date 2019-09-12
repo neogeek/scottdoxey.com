@@ -1,0 +1,37 @@
+{
+    "displayName": "CandyCoded",
+    "links": [
+        {
+            "href": "https://assetstore.unity.com/packages/tools/animation/candycoded-115239",
+            "name": "Unity Asset Store"
+        },
+        {
+            "href": "https://candycoded.xyz/",
+            "name": "candycoded.xyz"
+        }
+    ],
+    "tags": ["Unity", "C#", "Open Source"],
+    "description": "CandyCoded is a collection of useful components and extensions for building in Unity. Whether you are building a quick prototype or a production-ready experience, CandyCoded will help you get there.",
+    "videos": [
+        {
+            "poster": "./images/projects/candycoded/candycoded-animate-hd.jpg",
+            "sources": [
+                "./images/projects/candycoded/candycoded-animate-hd.mp4",
+                "./images/projects/candycoded/candycoded-animate-hd.webm"
+            ]
+        },
+        {
+            "poster": "./images/projects/candycoded/candycoded-raycastreflect-hd.jpg",
+            "sources": [
+                "./images/projects/candycoded/candycoded-raycastreflect-hd.mp4",
+                "./images/projects/candycoded/candycoded-raycastreflect-hd.webm"
+            ]
+        }
+    ],
+    "additionalLinks": [
+        {
+            "href": "https://medium.com/@neogeek/candycoded-first-public-beta-579236197b40",
+            "name": "Announcement blog post"
+        }
+    ]
+}

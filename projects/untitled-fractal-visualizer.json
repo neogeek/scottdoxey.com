@@ -1,0 +1,14 @@
+{
+    "displayName": "Untitled Fractal Visualizer",
+    "tags": ["VR"],
+    "description": "An untitled fractal visualizer that will place you in a void with the ability to create and interact with fractals generated using the chaos game method. Once built, the fractals will react not only to your interactions but the accompanying music.",
+    "videos": [
+        {
+            "poster": "./images/projects/untitled-fractal-visualizer/fractal-visualizer-hd.jpg",
+            "sources": [
+                "./images/projects/untitled-fractal-visualizer/fractal-visualizer-hd.mp4",
+                "./images/projects/untitled-fractal-visualizer/fractal-visualizer-hd.webm"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "displayName": "Unity iOS Bridge",
+    "links": [
+        {
+            "href": "https://github.com/CandyCoded/Unity-iOS-Bridge",
+            "name": "GitHub Repo"
+        }
+    ],
+    "tags": ["Unity", "iOS", "C#", "Objective-C", "Open Source"],
+    "description": "Bridge for requesting state from an iOS device"
+}

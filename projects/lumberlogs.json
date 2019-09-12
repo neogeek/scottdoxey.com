@@ -1,0 +1,14 @@
+{
+    "displayName": "LumberLogs",
+    "links": [
+        {
+            "href": "https://github.com/neogeek/lumber-logs",
+            "name": "GitHub Repo"
+        }
+    ],
+    "tags": ["Web", "React", "Desktop App", "Open Source"],
+    "description": "A desktop app log aggregation tool.",
+    "images": [
+        "./images/projects/lumber-logs/lumber-logs-screennshot-macos-app.jpg"
+    ]
+}
