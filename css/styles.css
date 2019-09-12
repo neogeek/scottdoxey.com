@@ -139,6 +139,8 @@ button {
 }
 
 .project-videos video {
+    height: 250px;
+    width: auto;
     background-size: cover;
     background-repeat: no-repeat;
 }
