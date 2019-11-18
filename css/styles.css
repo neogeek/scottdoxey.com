@@ -61,9 +61,6 @@ button {
     padding: 10em 2em 2em;
     color: #fff;
     background-color: #000;
-    background-image: url('../images/header.jpg');
-    background-repeat: no-repeat;
-    background-position: bottom right;
 }
 
 .page-header h1 {
