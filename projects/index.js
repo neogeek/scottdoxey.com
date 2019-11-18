@@ -16,16 +16,7 @@ const xrComponents = require('./xr-components.json');
 module.exports = [
     flipJacks,
     untitledSolitaireGame,
-    untitledVRSwordFightingGame,
     candycoded,
-    arfoundationComponents,
-    xrComponents,
-    unityIOSBridge,
-    unityCITools,
-    topdown,
-    lumberlogs,
-    untitledGolfGame,
     smoothieOperator,
-    untitledFractalVisualizer,
-    endlessRunner
+    untitledFractalVisualizer
 ];
