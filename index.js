@@ -59,24 +59,19 @@ const renderProject = project =>
         }
     </p>
     <p class="project--description">${project.description}</p>
-
+    <div class="project--media">
 ${
     project.videos && project.videos.length > 0
-        ? `
-
-    <div class="project-videos">
-        ${project.videos.map(renderVideo).join('')}
-    </div>`
+        ? project.videos.map(renderVideo).join('')
         : ''
 }
 
     ${
         project.images && project.images.length > 0
-            ? `<div class="project-images">
-        ${project.images.map(renderImage).join('')}
-    </div>`
+            ? project.images.map(renderImage).join('')
             : ''
     }
+    </div>
 
     ${
         project.additionalLinks && project.additionalLinks.length > 0

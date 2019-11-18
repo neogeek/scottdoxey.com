@@ -135,7 +135,7 @@ button {
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-.project-videos video {
+.project--media video {
     height: 250px;
     width: auto;
     background-size: cover;
