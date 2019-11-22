@@ -135,11 +135,18 @@ button {
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-.project--media video {
-    height: 250px;
-    width: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
+.project--media video,
+.project--media img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 48rem) {
+    .project--media video,
+    .project--media img {
+        height: 250px;
+        width: auto;
+    }
 }
 
 .project--additional-links-header {
