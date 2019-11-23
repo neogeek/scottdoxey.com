@@ -1,9 +1,9 @@
 language: node_js
 node_js:
-    - '10'
-before_install:
-    - if [[ `npm -v` != 5* ]]; then npm i -g npm@latest; fi
+    - '12'
 after_success:
+    - node --version
+    - npm --version
     - make build
 deploy:
     provider: s3
