@@ -30,6 +30,7 @@ const renderVideo = ({ poster, sources }) => `
             loop
             muted
             playsinline
+            preload
             poster="${poster}"
         >
             ${sources.map(renderVideoSource).join('\n')}
