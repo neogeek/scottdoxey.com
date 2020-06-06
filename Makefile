@@ -1,5 +1,5 @@
 build:
-	node index.js > index.html
+	node index.js
 
 test:
 	echo "No tests specified."
