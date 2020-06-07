@@ -1,5 +1,5 @@
 const cacheName = 'scottdoxey.com';
-const cacheVersion = `${cacheName}::1.0.0`;
+const cacheVersion = `${cacheName}::2.0.0`;
 
 const cachedFiles = ['/', '/css/styles.css'];
 
