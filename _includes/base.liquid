@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    {% include head.liquid %}
+    <body>
+        {% include header.liquid %}
+        <main>
+            {{ content }}
+        </main>
+        {% include footer.liquid %}
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () =>
+                    navigator.serviceWorker.register('/serviceWorker.js')
+                );
+            }
+        </script>
+    </body>
+</html>
