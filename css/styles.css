@@ -52,6 +52,7 @@ button {
 
 input {
     padding: 0.5rem;
+    max-width: 100%;
 }
 
 button {
