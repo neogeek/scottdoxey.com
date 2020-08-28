@@ -1,9 +1,0 @@
-{
-    "displayName": "Untitled Solitaire Game",
-    "tags": ["iOS", "Android", "AR"],
-    "description": "An untitled solitaire game made with the purpose of learning how to manage a central codebase for use with multiple Unity projects.",
-    "images": [
-        "./images/projects/untitled-solitaire-game/solitaire-game-screenshot-in-game.jpg",
-        "./images/projects/untitled-solitaire-game/solitaire-game-screenshot-unity-editor.jpg"
-    ]
-}
