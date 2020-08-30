@@ -1,8 +1,8 @@
 build:
-	eleventy --formats=html,css,ico,png,jpg,mp4,webm
+	eleventy
 
 serve:
-	eleventy --serve --formats=html,css,ico,png,jpg,mp4,webm
+	eleventy --serve
 
 test:
 	echo "No tests specified."
