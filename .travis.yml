@@ -4,8 +4,8 @@ node_js:
 after_success:
     - node --version
     - npm --version
-    - npm install -g @11ty/eleventy
-    - make build
+    - npm install
+    - npm run build
 deploy:
     provider: s3
     access_key_id: $ACCESS_KEY_ID
