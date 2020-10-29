@@ -109,7 +109,7 @@ section > div {
     }
 }
 
-section h2 {
+section h2:not(:first-child) {
     margin: 1rem 0 0;
 }
 
