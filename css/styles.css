@@ -93,7 +93,7 @@ section {
     background-position: right bottom;
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 70rem) {
     section {
         display: flex;
     }
@@ -103,7 +103,7 @@ section > div {
     padding: 3rem;
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 70rem) {
     section > div {
         max-width: 50%;
     }
