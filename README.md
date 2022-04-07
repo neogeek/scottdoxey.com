@@ -1,3 +1,3 @@
 # scottdoxey.com
 
-[![Build Status](https://travis-ci.org/neogeek/scottdoxey.com.svg?branch=master)](https://travis-ci.org/neogeek/scottdoxey.com)
+[![Deploy](https://github.com/neogeek/scottdoxey.com/actions/workflows/deploy.workflow.yml/badge.svg)](https://github.com/neogeek/scottdoxey.com/actions/workflows/deploy.workflow.yml)
