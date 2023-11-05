@@ -6,6 +6,8 @@
     :root {
         --main-foreground-color: #222;
         --main-background-color: #fff;
+        --project-foreground-color: #222;
+        --project-background-color: #eee;
     }
 }
 
@@ -17,6 +19,8 @@
     :root {
         --main-foreground-color: #fff;
         --main-background-color: #222;
+        --project-foreground-color: #fff;
+        --project-background-color: #2f3234;
     }
 }
 
@@ -30,6 +34,11 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+}
+
+.disabled {
+    pointer-events: none;
+    color: #ccc;
 }
 
 body {
@@ -112,8 +121,8 @@ p > img {
     margin: 2rem auto;
     max-width: 80rem;
     flex-direction: column;
-    color: #222;
-    background-color: #eee;
+    color: var(--project-foreground-color);
+    background-color: var(--project-background-color);
     border-radius: 1.5rem;
     overflow: hidden;
 }
