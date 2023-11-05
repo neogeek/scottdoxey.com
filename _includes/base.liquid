@@ -1,20 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    {% include './head.liquid' %}
+    {% render 'head' %}
     <body>
-        {% include './header.liquid' %}
+        {% render 'header' %}
         <main>
             {{ content }}
         </main>
-        {% include './footer.liquid' %}
+        {% render 'footer' %}
         <script>
-            if (
-                window.location.hostname !== 'localhost' &&
-                'serviceWorker' in navigator
-            ) {
-                window.addEventListener('load', () =>
-                    navigator.serviceWorker.register('/serviceWorker.js')
-                );
+            if (window.location.hostname !== 'localhost' && 'serviceWorker' in navigator) {
+                window.addEventListener('load', () => navigator.serviceWorker.register('/serviceWorker.js'));
             }
         </script>
     </body>
