@@ -4,6 +4,7 @@
     }
 
     :root {
+        --link-color: #f22671;
         --main-foreground-color: #222;
         --main-background-color: #fff;
         --project-foreground-color: #222;
@@ -17,6 +18,7 @@
     }
 
     :root {
+        --link-color: #f22671;
         --main-foreground-color: #fff;
         --main-background-color: #222;
         --project-foreground-color: #fff;
@@ -52,7 +54,7 @@ body {
 }
 
 a {
-    color: #f22671;
+    color: var(--link-color);
     font-weight: 600;
     font-style: italic;
 }
@@ -60,7 +62,7 @@ a {
 a:active,
 a:hover {
     color: #fff;
-    background-color: #f22671;
+    background-color: var(--link-color);
     text-decoration: none;
 }
 
@@ -182,6 +184,11 @@ p > img {
     align-items: center;
     flex-direction: column;
     gap: 1rem 2rem;
+}
+
+.social-links i[class^='fa-'] {
+    padding-right: 0.5rem;
+    opacity: 0.65;
 }
 
 @media (min-width: 70rem) {
