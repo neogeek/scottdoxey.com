@@ -88,6 +88,10 @@ p > img {
     .page-header {
         flex-direction: row;
     }
+
+    .page-header h2 {
+        width: 80%;
+    }
 }
 
 .page-header h1 {
