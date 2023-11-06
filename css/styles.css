@@ -191,6 +191,69 @@ p > img {
     opacity: 0.65;
 }
 
+.case-study {
+    margin: 0 auto;
+    padding: 3rem 0;
+    max-width: 80rem;
+}
+
+.case-study h1,
+.case-study h2,
+.case-study h3 {
+    margin: 2rem 0;
+}
+
+.case-study blockquote {
+    margin: 2rem 0;
+    padding: 1rem;
+    color: #222;
+    background-color: #ddd;
+}
+
+.case-study blockquote > p {
+    padding-left: 1rem;
+    border-left: 0.5rem solid #999;
+}
+
+.case-study > p > img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 70rem) {
+    .case-study .multiple-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 2rem;
+        grid-column-gap: 2rem;
+    }
+}
+
+.case-study .multiple-images img {
+    width: 100%;
+    height: auto;
+}
+
+.case-study > p {
+    margin: 1rem 0;
+}
+
+.case-study > ul {
+    margin: 1rem 0;
+}
+
+.case-study > ul li,
+.case-study > ol li {
+    margin-left: 1.5rem;
+}
+
+@media (min-width: 70rem) {
+    .case-study > ul li,
+    .case-study > ol li {
+        margin-left: 3rem;
+    }
+}
+
 @media (min-width: 70rem) {
     .social-links {
         flex-direction: row;
