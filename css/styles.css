@@ -164,6 +164,10 @@ p > img {
     background-color: #eee;
 }
 
+.project .project-details .button.disabled {
+    opacity: 0.5;
+}
+
 .project .project-details .button [class^='fa-'] {
     margin-right: 0.25rem;
 }
