@@ -6,9 +6,9 @@
     :root {
         --link-color: #f22671;
         --main-foreground-color: #222;
-        --main-background-color: #fff;
+        --main-background-color: #f3f4f6;
         --project-foreground-color: #222;
-        --project-background-color: #eee;
+        --project-background-color: #fff;
     }
 }
 
@@ -127,6 +127,8 @@ p > img {
     background-color: var(--project-background-color);
     border-radius: 1.5rem;
     overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 @media (min-width: 70rem) {
@@ -146,6 +148,24 @@ p > img {
 
 .project .project-details .project-icon {
     margin-bottom: 1rem;
+}
+
+.project .project-details .button {
+    text-decoration: none;
+    margin: 1rem 1rem 0 0;
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-style: normal;
+    border-radius: 0.5rem;
+    color: #333;
+    white-space: nowrap;
+    background-color: #eee;
+}
+
+.project .project-details .button [class^='fa-'] {
+    margin-right: 0.25rem;
 }
 
 .project .project-details p {
