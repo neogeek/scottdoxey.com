@@ -171,6 +171,12 @@ p > img {
     flex: 1;
 }
 
+@media (min-width: 70rem) {
+    .project .project-preview video {
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+
 .page-footer {
     margin: 0 auto;
     padding: 3rem 0;
