@@ -296,6 +296,10 @@ p > img {
     }
 }
 
+.mermaid > svg {
+    max-width: 100% !important;
+}
+
 @media (min-width: 70rem) {
     .social-links {
         flex-direction: row;

@@ -31,6 +31,57 @@ Tangle's original implementation goal was to create a simple authentication syst
 
 ## Results
 
+```mermaid
+graph LR;
+    unityApp["Unity App"]
+    adminDashboard["Admin
+Dashboard"]
+    uptimerobotStatus["UptimeRobot
+Status"]
+    cloudDNS["Cloud DNS"]
+    cloudFunctions["Cloud Function"]
+    cloudStorage["Cloud Storage"]
+    loadBalancer["Google Cloud
+Load Balancer"]
+    vercel["Vercel"]
+    cloudMemorystore["Google Cloud
+Memorystore"]
+    cloudSQL["Google Cloud
+SQL"]
+
+    unauthenticatedRequests["Unauthenticated
+Requests"]
+    authenticatedRequests["Authenticated
+Requests"]
+    authentication["Authentication"]
+    rateLimiter["Rate Limiter"]
+    dateValidation["Data Validation"]
+    routes["Routes"]
+    responses["Paginated HTTP
+Responses and
+Status Codes"]
+
+    unityApp-->cloudDNS
+    adminDashboard-->cloudDNS
+    uptimerobotStatus-->cloudDNS
+    cloudDNS-->loadBalancer
+    loadBalancer-->cloudFunctions
+    loadBalancer-->cloudStorage
+    loadBalancer-->vercel
+    cloudFunctions-->api
+
+    subgraph api ["API"]
+        unauthenticatedRequests-->rateLimiter
+        authenticatedRequests-->authentication
+        authentication<-->cloudMemorystore
+        authentication-->rateLimiter
+        rateLimiter-->dateValidation
+        cloudSQL<-->routes
+        dateValidation-->routes
+        routes-->responses
+    end
+```
+
 ## Challenges and Solutions
 
 ### Automation
