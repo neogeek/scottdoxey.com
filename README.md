@@ -6,5 +6,5 @@
 
 ```bash
 ffmpeg -i "handcrank-demo.mov" -vf "scale=min(1000\,iw):-2" -c:v libx264 -preset veryslow -an "handcrank-demo.mp4"
-ffmpeg -i "handcrank-demo.mov" -vf "scale=min(1000\,iw):-2" -preset veryslow  -an "handcrank-demo.webm"
+ffmpeg -i "handcrank-demo.mov" -vf "scale=min(1000\,iw):-2" -preset veryslow -an "handcrank-demo.webm"
 ```
