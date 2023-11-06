@@ -454,7 +454,7 @@ layout: base.liquid
         setInterval(() => {
             const { matches } = window.matchMedia('(min-width: 70rem)');
 
-            if (!matches) {
+            if (!matches || !document.hasFocus()) {
                 return;
             }
 
