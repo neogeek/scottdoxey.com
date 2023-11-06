@@ -206,6 +206,24 @@ p > img {
     align-items: end;
 }
 
+@media (min-width: 70rem) {
+    .project .project-preview.slideshow {
+        position: relative;
+    }
+
+    .project .project-preview.slideshow img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: opacity 1000ms;
+        opacity: 1;
+    }
+
+    .project .project-preview.slideshow img.hidden {
+        opacity: 0;
+    }
+}
+
 .project .project-preview img,
 .project .project-preview video {
     width: 100%;

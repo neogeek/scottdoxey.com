@@ -125,11 +125,26 @@ layout: base.liquid
             </p>
         </div>
     </div>
-    <figure class="project-preview">
+    <figure class="project-preview slideshow">
         <img
-            src="/images/projects/tangle-avatar-editor/download.png"
+            src="/images/projects/tangle-avatar-editor/download-coffee-shop.png"
             alt="Avatar generated using the Tangle Avatar Editor."
             class="dropshadow"
+        />
+        <img
+            src="/images/projects/tangle-avatar-editor/download-gundam.png"
+            alt="Avatar generated using the Tangle Avatar Editor."
+            class="dropshadow hidden"
+        />
+        <img
+            src="/images/projects/tangle-avatar-editor/download-lasers.png"
+            alt="Avatar generated using the Tangle Avatar Editor."
+            class="dropshadow hidden"
+        />
+        <img
+            src="/images/projects/tangle-avatar-editor/download-skull.png"
+            alt="Avatar generated using the Tangle Avatar Editor."
+            class="dropshadow hidden"
         />
     </figure>
 </section>
@@ -433,3 +448,29 @@ layout: base.liquid
         </video>
     </figure>
 </section>
+
+<script>
+    Array.from(document.querySelectorAll('.slideshow')).map(slideshow => {
+        setInterval(() => {
+            const { matches } = window.matchMedia('(min-width: 70rem)');
+
+            if (!matches) {
+                return;
+            }
+
+            const images = Array.from(slideshow.querySelectorAll('img'));
+
+            const activeImageIndex = images.findIndex(
+                image => !image.classList.contains('hidden')
+            );
+
+            images[activeImageIndex].classList.add('hidden');
+
+            if (activeImageIndex < images.length - 1) {
+                images[activeImageIndex + 1].classList.remove('hidden');
+            } else {
+                images[0].classList.remove('hidden');
+            }
+        }, 2000);
+    });
+</script>
