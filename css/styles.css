@@ -9,6 +9,8 @@
         --main-background-color: #f3f4f6;
         --project-foreground-color: #222;
         --project-background-color: #fff;
+        --button-outline-color: rgba(100, 100, 100, 0.5);
+        --button-outline-active-color: #f22671;
     }
 }
 
@@ -23,6 +25,8 @@
         --main-background-color: #222;
         --project-foreground-color: #fff;
         --project-background-color: #2f3234;
+        --button-outline-color: rgba(100, 100, 100, 0.5);
+        --button-outline-active-color: #f22671;
     }
 }
 
@@ -166,6 +170,16 @@ p > img {
     color: #333;
     white-space: nowrap;
     background-color: #eee;
+    outline-color: var(--button-outline-color);
+    outline-width: 0.2rem;
+    outline-offset: 0.15rem;
+    outline-style: solid;
+}
+
+.project .project-details .button:active,
+.project .project-details .button:focus,
+.project .project-details .button:hover {
+    outline-color: var(--button-outline-active-color);
 }
 
 .project .project-details .button.disabled {
