@@ -117,7 +117,7 @@ p > img {
 }
 
 .page-bio {
-    margin: 0rem auto;
+    margin: 0rem auto 4rem;
     padding: 1rem 0;
     max-width: 80rem;
 }
