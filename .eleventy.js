@@ -7,5 +7,9 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy('manifest.json');
 
+    eleventyConfig.setLiquidOptions({
+        root: ['_includes']
+    });
+
     eleventyConfig.addPlugin(pluginMermaid);
 };

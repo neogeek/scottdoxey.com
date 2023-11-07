@@ -121,8 +121,14 @@ p > img {
 }
 
 .page-bio {
-    margin: 0rem auto 4rem;
+    margin: 0rem auto 2rem;
     padding: 1rem 0;
+    max-width: 80rem;
+}
+
+.page-nav {
+    margin: 0 auto;
+    padding: 3rem 0;
     max-width: 80rem;
 }
 
@@ -245,12 +251,6 @@ p > img {
     .project .project-preview video {
         border-radius: 1rem 0 0 1rem;
     }
-}
-
-.page-footer {
-    margin: 0 auto;
-    padding: 3rem 0;
-    max-width: 80rem;
 }
 
 .social-links {
