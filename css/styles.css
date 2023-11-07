@@ -132,6 +132,21 @@ p > img {
     max-width: 80rem;
 }
 
+.social-links {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+}
+
+.social-links i[class^='fa-'] {
+    padding-right: 0.5rem;
+    opacity: 0.65;
+}
+
 .project {
     display: flex;
     margin: 2rem auto;
@@ -253,20 +268,6 @@ p > img {
     }
 }
 
-.social-links {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem 2rem;
-}
-
-.social-links i[class^='fa-'] {
-    padding-right: 0.5rem;
-    opacity: 0.65;
-}
-
 .case-study {
     margin: 0 auto;
     padding: 3rem 0;
@@ -332,10 +333,4 @@ p > img {
 
 .mermaid > svg {
     max-width: 100% !important;
-}
-
-@media (min-width: 70rem) {
-    .social-links {
-        flex-direction: row;
-    }
 }
