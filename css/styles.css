@@ -213,7 +213,9 @@ p > img {
 
     .project .project-preview.slideshow img {
         position: absolute;
-        bottom: 0;
+        margin: 0;
+        top: 50%;
+        transform: translateY(-50%);
         left: 0;
         transition: opacity 1000ms;
         opacity: 1;
