@@ -183,7 +183,7 @@ p > img {
 
 .project .project-details .button {
     text-decoration: none;
-    margin: 1rem 1rem 0 0;
+    margin: 1.5rem 1rem 0 0;
     display: inline-block;
     padding: 0.75rem 1.25rem;
     font-size: 1.3rem;
@@ -251,12 +251,21 @@ p > img {
 
 .project .project-preview img,
 .project .project-preview video {
-    width: 100%;
+    margin: 1rem;
+    width: calc(100% - 2rem);
     height: auto;
     flex: 1;
+    border-radius: 1rem;
 }
 
 @media (min-width: 70rem) {
+    .project .project-preview img,
+    .project .project-preview video {
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
     .project .project-preview .dropshadow {
         margin-top: 2rem;
         box-shadow: -3px 10px 15px 0 rgb(0 0 0 / 0.1),
