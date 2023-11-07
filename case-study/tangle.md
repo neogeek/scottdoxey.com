@@ -84,6 +84,8 @@ Status Codes"]
 
 ## Challenges and Solutions
 
+### Custom Rate Limiter
+
 ### Error Codes
 
 ### Data Validation
