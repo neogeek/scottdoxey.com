@@ -258,15 +258,17 @@ p > img {
 
 @media (min-width: 70rem) {
     .project .project-preview .dropshadow {
-        margin: 1rem 0 0 0;
-        border-radius: 0.5rem;
-        border-radius: 0.5rem 0 0 0;
+        margin-top: 2rem;
         box-shadow: -3px 10px 15px 0 rgb(0 0 0 / 0.1),
             -4px 4px 6px 0 rgb(0 0 0 / 0.1);
     }
 
-    .project .project-preview video {
+    .project .project-preview .align-middle {
         border-radius: 1rem 0 0 1rem;
+    }
+
+    .project .project-preview .align-bottom {
+        border-radius: 0.5rem 0 0 0;
     }
 }
 
