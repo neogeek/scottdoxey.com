@@ -269,6 +269,14 @@ p > img {
     padding: 0.5rem 0;
 }
 
+.project .project-details .button-info {
+    margin: 1.5rem 1rem 0 0;
+    display: inline-block;
+    font-size: 1rem;
+    opacity: 0.4;
+    white-space: nowrap;
+}
+
 .project .project-preview {
     flex: 1;
     display: flex;
