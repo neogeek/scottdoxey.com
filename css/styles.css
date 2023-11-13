@@ -378,6 +378,32 @@ p > img {
     height: auto;
 }
 
+.case-study .stats {
+    margin: 2rem 0;
+}
+
+.case-study .stats ul {
+    margin: 2rem 0;
+}
+
+@media (min-width: 70rem) {
+    .case-study .stats ul {
+        display: flex;
+    }
+}
+
+.case-study .stats ul li {
+    list-style: none;
+    flex: 1;
+    text-align: center;
+}
+
+.case-study .stats ul li span {
+    display: block;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
 .case-study > p {
     margin: 1rem 0;
 }

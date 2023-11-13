@@ -29,6 +29,20 @@ Tangle's original implementation goal was to create a simple authentication syst
     <img src="/images/projects/tangle/tangle-admin-home.png" />
 </div>
 
+## Stats
+
+<div class="stats">
+    <ul>
+        <li><span>78,000+</span> Total Logins</li>
+        <li><span>1,100+</span> Unique Users</li>
+        <li><span>350+</span> Unique Servers</li>
+    </ul>
+    <ul>
+        <li><span>500+</span> Users Joined Waitlist</li>
+        <li><span>22,000+</span> Objects Created on Servers</li>
+    </ul>
+</div>
+
 ## Results
 
 ```mermaid
