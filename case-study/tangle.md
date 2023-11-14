@@ -302,12 +302,6 @@ All emails sent from the API, welcome emails, server invites, password reset lin
 
 When running the API locally or running tests, the SendGrid API is run in `sandboxMode` so no emails are actually sent.
 
-### Automation
-
-#### GitHub Actions
-
-### Cross-team Collaboration
-
 ### Payment Processing
 
 Payment processing ended up being a much larger task than we initially anticipated. The original concept was to use Stripe's no-code options to set up the subscription for owners of each server and manage the subscription directly via Stripe's admin dashboard. We quickly realized that there were two issues.
