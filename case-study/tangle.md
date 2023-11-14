@@ -342,20 +342,23 @@ The high test coverage allowed us to iterate faster with a high confidence rate.
 We only had a few instances where we needed to have API versioning, but when we did need to do it, we utilized a header being passed from the API DLL with the current version of the DLL and compared it to a value locally.
 
 ```csharp
-public static string ProductName = "Tangle";
+public static class Tangle
+{
+    public static string ProductName = "Tangle";
 
-public static string ProductVersion = "2.0";
+    public static string ProductVersion = "2.0";
 
-public static string Comment = "";
+    public static string Comment = "";
 
-public const string ApiVersion = "2";
+    public const string ApiVersion = "2";
 
-public static string Version => System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+    public static string Version => System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
-public static string UserAgent => $"{ProductName} {ProductVersion} / API DLL {Version} {Comment}".Trim();
+    public static string UserAgent => $"{ProductName} {ProductVersion} / API DLL {Version} {Comment}".Trim();
 
-public static readonly Dictionary<string, string> DefaultHeaders =
-    new Dictionary<string, string> { { "User-Agent", UserAgent }, { "Api-Version", ApiVersion } };
+    public static readonly Dictionary<string, string> DefaultHeaders =
+        new Dictionary<string, string> { { "User-Agent", UserAgent }, { "Api-Version", ApiVersion } };
+}
 ```
 
 ```typescript
