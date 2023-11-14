@@ -424,8 +424,12 @@ p > img {
     }
 }
 
-.case-study code[class*='language-'],
+.case-study pre[class*='language-'] {
+    margin: 2rem 0;
+}
+
 .case-study pre[class*='language-'],
+.case-study code[class*='language-'],
 .case-study code {
     font-size: 1.2rem;
     line-height: 1.85rem;
