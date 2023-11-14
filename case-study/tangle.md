@@ -310,6 +310,18 @@ When running the API locally or running tests, the SendGrid API is run in `sandb
 
 ### Payment Processing
 
+Payment processing ended up being a much larger task than we initially anticipated. The original concept was to use Stripe's no-code options to set up the subscription for owners of each server and manage the subscription directly via Stripe's admin dashboard. We quickly realized that there were two issues.
+
+One was that when people signed up for a new account with a server, they didn't need to supply a credit card, but they needed a subscription in the system to set up a trial and a user account in Stripe with the server owner's email address. The other was that the subscription needed the server ID, membership count, and the server owner's user ID.
+
+We figured out how to do this and prevent needing to interrupt the user trialing Tangle with payment processing information. Once the trial ran out, a message was displayed in the Unity client and the Tangle admin dashboard informing the user that they needed to add a form of payment via the dashboard.
+
+Another issue was setting up logic to auto-update the server subscription membership quantity so the bill would prorate with the new membership quantity.
+
+Another issue was allowing a server to transfer ownership to another user. The transfer process needed to reassign the ownership in Stripe and the Tangle backend.
+
+These issues needed testing to ensure they worked and continued to work against the live Stripe service. To do this, we ran mock tests when merging code before deploying to development (or production). And then, we ran the same tests against the live service on a test account every night at midnight. This setup allowed us to iterate while ensuring no regressions occurred on Stripe's side.
+
 ### Testing
 
 ### API Versioning
