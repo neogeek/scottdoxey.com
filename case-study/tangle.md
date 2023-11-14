@@ -128,6 +128,41 @@ All routes returned valid headers to allow the dashboard and Unity client to rea
 
 ### Error Codes
 
+We needed an error code system that would work in both the API (TypeScript) and the Unity client (C#). We went with a hexadecimal system and set up the system to use ranges for each section.
+
+The `ErrorCode` enum was duplicated from the TypeScript API to the C# DLL included in the Unity client. While the `HumanReadableErrorCode` existed only in the API. This was to limit the localization logic to the API. An endpoint was available via the API that returned the `HumanReadableErrorCode` values and mapped them to the C# enum keys.
+
+```typescript
+/* eslint-disable no-magic-numbers */
+export enum ErrorCode {
+    INVALID = -1,
+    INVALID_INPUT = 0x0001, // 1
+    RATE_LIMIT_REACHED = 0x0002, // 2
+    // Authentication=
+    INVALID_EMAIL_ADDRESS = 0x1001, // 4097
+    INVALID_PASSWORD = 0x1002, // 4098
+    INVALID_PASSWORD_RESET_TOKEN = 0x1003, // 4099
+    NOT_AUTHORIZED = 0x1004 // 4100
+}
+
+export const HumanReadableErrorCode: { [key: number]: string } = {
+    [ErrorCode.INVALID]: 'Unknown error.',
+    [ErrorCode.INVALID_INPUT]: 'Invalid input.',
+    [ErrorCode.RATE_LIMIT_REACHED]:
+        'Whoa there, slow down! You have reached the limit of how many requests you can make.',
+    // Authentication
+    [ErrorCode.INVALID_EMAIL_ADDRESS]:
+        'Invalid email address. Please check and try again.',
+    [ErrorCode.INVALID_PASSWORD]:
+        'Invalid password. Please check and try again.',
+    [ErrorCode.INVALID_PASSWORD_RESET_TOKEN]:
+        'Invalid password reset token. Please check and try again.',
+    [ErrorCode.NOT_AUTHORIZED]: 'Not authorized.'
+};
+```
+
+The plan was to add additional languages to the API errors once we started supporting additional languages in the client.
+
 ### Data Validation
 
 ### Emails
