@@ -424,6 +424,11 @@ p > img {
     }
 }
 
+.case-study code[class*='language-'],
+.case-study pre[class*='language-'] {
+    font-size: 1.25rem;
+}
+
 .mermaid > svg {
     max-width: 100% !important;
 }

@@ -1,3 +1,5 @@
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+
 const pluginMermaid = require('@kevingimbel/eleventy-plugin-mermaid');
 
 module.exports = function (eleventyConfig) {
@@ -11,5 +13,6 @@ module.exports = function (eleventyConfig) {
         root: ['_includes']
     });
 
+    eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(pluginMermaid);
 };
