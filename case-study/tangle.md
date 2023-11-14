@@ -339,4 +339,46 @@ The high test coverage allowed us to iterate faster with a high confidence rate.
 
 ### API Versioning
 
-## References
+We only had a few instances where we needed to have API versioning, but when we did need to do it, we utilized a header being passed from the API DLL with the current version of the DLL and compared it to a value locally.
+
+```csharp
+public static string ProductName = "Tangle";
+
+public static string ProductVersion = "2.0";
+
+public static string Comment = "";
+
+public const string ApiVersion = "2";
+
+public static string Version => System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+
+public static string UserAgent => $"{ProductName} {ProductVersion} / API DLL {Version} {Comment}".Trim();
+
+public static readonly Dictionary<string, string> DefaultHeaders =
+    new Dictionary<string, string> { { "User-Agent", UserAgent }, { "Api-Version", ApiVersion } };
+```
+
+```typescript
+export const isApiVersionGreaterThanOrEqual = (
+    { headers = {} }: Request,
+    testVersionPattern: string
+): boolean => {
+    const apiVersion = semver.coerce(String(headers['Api-Version']));
+
+    const testVersion = semver.coerce(testVersionPattern);
+
+    if (!apiVersion || !testVersion) {
+        return false;
+    }
+
+    return semver.gte(apiVersion, testVersion);
+};
+```
+
+```typescript
+if (isApiVersionGreaterThanOrEqual(req, '2')) {
+    ...
+}
+```
+
+The goal was to eventually set up the API to look like `/v1/users/`, but due to quick iteration, this was never fully realized.
