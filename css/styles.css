@@ -436,6 +436,7 @@ p > img {
 .case-study code {
     color: #fff;
     padding: 0.35rem;
+    vertical-align: text-bottom;
 }
 
 .mermaid > svg {
