@@ -324,6 +324,19 @@ These issues needed testing to ensure they worked and continued to work against 
 
 ### Testing
 
+<div class="stats">
+    <ul>
+        <li><span>30,000+</span> Lines of Code</li>
+        <li><span>620+</span> Tests</li>
+        <li><span>97.12%</span> Code Coverage</li>
+        <li><span>99.99%</span> 90 Day Uptime</li>
+    </ul>
+</div>
+
+From the start of the project, we wanted to ensure we maintained a high test coverage. This was to guarantee we maintain high uptime for the API. We test both the routes and the controllers, even with the overlap. This is to make sure the data coming into the routes, and the way it passes data to the controller is correct.
+
+The high test coverage allowed us to iterate faster with a high confidence rate. We could make these changes quickly and efficiently, even with sweeping code changes that hit the codebase and the database.
+
 ### API Versioning
 
 ## References
