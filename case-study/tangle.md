@@ -6,7 +6,7 @@ layout: case-study.liquid
 
 ![](/images/projects/tangle/header.png)
 
-> **Role:** Programmer, Designer, Dev Ops
+> **Role:** Programmer, Designer, DevOps
 
 ## Summary
 
