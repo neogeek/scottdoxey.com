@@ -165,7 +165,142 @@ The plan was to add additional languages to the API errors once we started suppo
 
 ### Data Validation
 
+For data validation we use the [zod](https://zod.dev/) validation library. We used it when data comes in to a route and again when it's passed to a controller. We do this to ensure the data is verified before anything happens in the API, either via a route or cron job.
+
+This example of how we used the validation library is simplified for demo purposes.
+
+```typescript
+import { z } from 'zod';
+
+export const STRING_MAX_LENGTH = 255;
+export const MIN_PASSWORD_LENGTH = 8;
+
+export const emailSchema = z
+    .string()
+    .trim()
+    .toLowerCase()
+    .email()
+    .catch(() => {
+        throw new Error(ErrorCode.INVALID_EMAIL_ADDRESS);
+    });
+
+export const passwordSchema = z
+    .string()
+    .trim()
+    .max(STRING_MAX_LENGTH)
+    .refine(val => {
+        const isMinimumLength = val.length >= MIN_PASSWORD_LENGTH;
+        const containsUppercaseLetter = val.match(/[A-Z]/);
+        const containsLowercaseLetter = val.match(/[a-z]/);
+        const containsNumber = val.match(/[0-9]/);
+        const containsSpecialCharacter = val.match(
+            /[~!@#$%^&*_\-+=`|\\(){}[\]:;"'<>,.?/]/g
+        );
+
+        return [
+            isMinimumLength,
+            containsUppercaseLetter,
+            containsLowercaseLetter,
+            containsNumber,
+            containsSpecialCharacter
+        ].every(Boolean);
+    })
+    .catch(() => {
+        throw new Error(ErrorCode.INVALID_PASSWORD);
+    });
+
+export const signupSchema = z.object({
+    emailAddress: emailSchema,
+    createPassword: passwordSchema
+});
+
+export const loginSchema = z.object({
+    emailAddress: emailSchema,
+    password: z
+        .string()
+        .trim()
+        .max(STRING_MAX_LENGTH)
+        .min(1)
+        .catch(() => {
+            throw new Error(ErrorCode.INVALID_PASSWORD);
+        })
+});
+```
+
+```typescript
+const validatedValues = loginSchema.parse({ emailAddress, password });
+```
+
+```typescript
+const validatedValues = signupSchema.parse({
+    emailAddress,
+    createPassword: password
+});
+```
+
+### Pagination
+
+Each route that returns a list conforms to [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS), returning the data as well as links to the current page and any next or previous pages. This allows for easy pagination via the dashboard as well as the Unity client. The API DLL created for the Unity client has helper utilities for automatically looping through the paginated requests to return all the results.
+
+```json
+{
+  "data": [
+    {
+      "userId": 1,
+      "name": "Scott"
+    },
+    ...
+  ],
+  "totalRows": 1000,
+  "links": {
+    "self": "/users/?offset=0&limit=100",
+    "next": "/users/?offset=100&limit=100"
+  }
+}
+```
+
 ### Emails
+
+All emails sent from the API, welcome emails, server invites, password reset link, are all sent via a single email send API via [SendGrid](https://sendgrid.com/). The emails are designed locally using [MJML](https://mjml.io/) to simplify the creation of email as well as allowing us to maintain a local copy of all emails not stored directly in SendGrid.
+
+```xml
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-class name="body-text" font-size="16px" padding="0px 25px" line-height="1.5" font-family="helvetica" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-image src="../../images/tangle_logo_dark_bg.jpg"></mj-image>
+
+        <mj-text mj-class="body-text">
+          <p>Hello!</p>
+        </mj-text>
+
+        <mj-text mj-class="body-text">
+          <p>Someone has requested to reset the password for your Tangle account. If this was not you, disregard this email.</p>
+
+          <p>To reset your password, click the following link (or paste into your browser) within the next 90 minutes:</p>
+        </mj-text>
+
+        <mj-text mj-class="body-text">
+          <p>{{PASSWORD_RESET_LINK}}</p>
+        </mj-text>
+
+        <mj-text mj-class="body-text">
+          <p>Happy Tangling!</p>
+
+          <p>- The Tangle team</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
+```
+
+When running the API locally or running tests, the SendGrid API is run in `sandboxMode` so no emails are actually sent.
 
 ### Automation
 
