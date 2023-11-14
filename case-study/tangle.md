@@ -43,7 +43,7 @@ Tangle's original implementation goal was to create a simple authentication syst
     </ul>
 </div>
 
-## Results
+## Architecture Diagram
 
 ```mermaid
 graph LR;
