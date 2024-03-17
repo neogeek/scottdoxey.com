@@ -14,13 +14,13 @@ Tangle's original implementation goal was to create a simple authentication syst
 
 ## Objectives
 
--   Allow users to log into Tangle and join a server where other members are also using Tangle.
--   Allow users to create post-its, image uploads, links, etc and have that data be visible to other users as well a persist.
--   Allow users to manage servers and their memberships.
--   Allow users to invite users to servers and those users to accept or decline invites.
--   Allow users to manage subscription payments via third party payment processing.
--   Ensure users information is secure and that they only have access to the information they allowed to access and modify.
--   Ensure users connections to the audio/video servers are secure using authentication webhooks.
+- Allow users to log into Tangle and join a server where other members are also using Tangle.
+- Allow users to create post-its, image uploads, links, etc and have that data be visible to other users as well a persist.
+- Allow users to manage servers and their memberships.
+- Allow users to invite users to servers and those users to accept or decline invites.
+- Allow users to manage subscription payments via third party payment processing.
+- Ensure users information is secure and that they only have access to the information they allowed to access and modify.
+- Ensure users connections to the audio/video servers are secure using authentication webhooks.
 
 ## Implementation
 
@@ -118,7 +118,7 @@ We also wanted to make sure rate limiting didn't affect local development or uni
 
 ```typescript
 rateLimiterGenerator({
-    ignoreErrors: process.env.NODE_ENV === 'development'
+  ignoreErrors: process.env.NODE_ENV === 'development'
 });
 ```
 
@@ -135,29 +135,28 @@ The `ErrorCode` enum was duplicated from the TypeScript API to the C# DLL includ
 ```typescript
 /* eslint-disable no-magic-numbers */
 export enum ErrorCode {
-    INVALID = -1,
-    INVALID_INPUT = 0x0001, // 1
-    RATE_LIMIT_REACHED = 0x0002, // 2
-    // Authentication=
-    INVALID_EMAIL_ADDRESS = 0x1001, // 4097
-    INVALID_PASSWORD = 0x1002, // 4098
-    INVALID_PASSWORD_RESET_TOKEN = 0x1003, // 4099
-    NOT_AUTHORIZED = 0x1004 // 4100
+  INVALID = -1,
+  INVALID_INPUT = 0x0001, // 1
+  RATE_LIMIT_REACHED = 0x0002, // 2
+  // Authentication=
+  INVALID_EMAIL_ADDRESS = 0x1001, // 4097
+  INVALID_PASSWORD = 0x1002, // 4098
+  INVALID_PASSWORD_RESET_TOKEN = 0x1003, // 4099
+  NOT_AUTHORIZED = 0x1004 // 4100
 }
 
 export const HumanReadableErrorCode: { [key: number]: string } = {
-    [ErrorCode.INVALID]: 'Unknown error.',
-    [ErrorCode.INVALID_INPUT]: 'Invalid input.',
-    [ErrorCode.RATE_LIMIT_REACHED]:
-        'Whoa there, slow down! You have reached the limit of how many requests you can make.',
-    // Authentication
-    [ErrorCode.INVALID_EMAIL_ADDRESS]:
-        'Invalid email address. Please check and try again.',
-    [ErrorCode.INVALID_PASSWORD]:
-        'Invalid password. Please check and try again.',
-    [ErrorCode.INVALID_PASSWORD_RESET_TOKEN]:
-        'Invalid password reset token. Please check and try again.',
-    [ErrorCode.NOT_AUTHORIZED]: 'Not authorized.'
+  [ErrorCode.INVALID]: 'Unknown error.',
+  [ErrorCode.INVALID_INPUT]: 'Invalid input.',
+  [ErrorCode.RATE_LIMIT_REACHED]:
+    'Whoa there, slow down! You have reached the limit of how many requests you can make.',
+  // Authentication
+  [ErrorCode.INVALID_EMAIL_ADDRESS]:
+    'Invalid email address. Please check and try again.',
+  [ErrorCode.INVALID_PASSWORD]: 'Invalid password. Please check and try again.',
+  [ErrorCode.INVALID_PASSWORD_RESET_TOKEN]:
+    'Invalid password reset token. Please check and try again.',
+  [ErrorCode.NOT_AUTHORIZED]: 'Not authorized.'
 };
 ```
 
@@ -176,54 +175,54 @@ export const STRING_MAX_LENGTH = 255;
 export const MIN_PASSWORD_LENGTH = 8;
 
 export const emailSchema = z
-    .string()
-    .trim()
-    .toLowerCase()
-    .email()
-    .catch(() => {
-        throw new Error(ErrorCode.INVALID_EMAIL_ADDRESS);
-    });
+  .string()
+  .trim()
+  .toLowerCase()
+  .email()
+  .catch(() => {
+    throw new Error(ErrorCode.INVALID_EMAIL_ADDRESS);
+  });
 
 export const passwordSchema = z
-    .string()
-    .trim()
-    .max(STRING_MAX_LENGTH)
-    .refine(val => {
-        const isMinimumLength = val.length >= MIN_PASSWORD_LENGTH;
-        const containsUppercaseLetter = val.match(/[A-Z]/);
-        const containsLowercaseLetter = val.match(/[a-z]/);
-        const containsNumber = val.match(/[0-9]/);
-        const containsSpecialCharacter = val.match(
-            /[~!@#$%^&*_\-+=`|\\(){}[\]:;"'<>,.?/]/g
-        );
+  .string()
+  .trim()
+  .max(STRING_MAX_LENGTH)
+  .refine(val => {
+    const isMinimumLength = val.length >= MIN_PASSWORD_LENGTH;
+    const containsUppercaseLetter = val.match(/[A-Z]/);
+    const containsLowercaseLetter = val.match(/[a-z]/);
+    const containsNumber = val.match(/[0-9]/);
+    const containsSpecialCharacter = val.match(
+      /[~!@#$%^&*_\-+=`|\\(){}[\]:;"'<>,.?/]/g
+    );
 
-        return [
-            isMinimumLength,
-            containsUppercaseLetter,
-            containsLowercaseLetter,
-            containsNumber,
-            containsSpecialCharacter
-        ].every(Boolean);
-    })
-    .catch(() => {
-        throw new Error(ErrorCode.INVALID_PASSWORD);
-    });
+    return [
+      isMinimumLength,
+      containsUppercaseLetter,
+      containsLowercaseLetter,
+      containsNumber,
+      containsSpecialCharacter
+    ].every(Boolean);
+  })
+  .catch(() => {
+    throw new Error(ErrorCode.INVALID_PASSWORD);
+  });
 
 export const signupSchema = z.object({
-    emailAddress: emailSchema,
-    createPassword: passwordSchema
+  emailAddress: emailSchema,
+  createPassword: passwordSchema
 });
 
 export const loginSchema = z.object({
-    emailAddress: emailSchema,
-    password: z
-        .string()
-        .trim()
-        .max(STRING_MAX_LENGTH)
-        .min(1)
-        .catch(() => {
-            throw new Error(ErrorCode.INVALID_PASSWORD);
-        })
+  emailAddress: emailSchema,
+  password: z
+    .string()
+    .trim()
+    .max(STRING_MAX_LENGTH)
+    .min(1)
+    .catch(() => {
+      throw new Error(ErrorCode.INVALID_PASSWORD);
+    })
 });
 ```
 
@@ -233,8 +232,8 @@ const validatedValues = loginSchema.parse({ emailAddress, password });
 
 ```typescript
 const validatedValues = signupSchema.parse({
-    emailAddress,
-    createPassword: password
+  emailAddress,
+  createPassword: password
 });
 ```
 
@@ -357,18 +356,18 @@ public static class Tangle
 
 ```typescript
 export const isApiVersionGreaterThanOrEqual = (
-    { headers = {} }: Request,
-    testVersionPattern: string
+  { headers = {} }: Request,
+  testVersionPattern: string
 ): boolean => {
-    const apiVersion = semver.coerce(String(headers['Api-Version']));
+  const apiVersion = semver.coerce(String(headers['Api-Version']));
 
-    const testVersion = semver.coerce(testVersionPattern);
+  const testVersion = semver.coerce(testVersionPattern);
 
-    if (!apiVersion || !testVersion) {
-        return false;
-    }
+  if (!apiVersion || !testVersion) {
+    return false;
+  }
 
-    return semver.gte(apiVersion, testVersion);
+  return semver.gte(apiVersion, testVersion);
 };
 ```
 
