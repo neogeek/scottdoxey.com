@@ -37,9 +37,11 @@ The basic architecture for this prototype would look like this:
 
 ```mermaid
 graph LR;
+    chartFile["Chart File"]
     chartFileParser["Chart File Parser"]
     chartFileRender["Chart File Renderer"]
 
+    audioFile["Audio File"]
     audioFileWaveformParser["Audio File Waveform Parser"]
     audioFileWaveformRenderer["Audio File Waveform Renderer"]
 
@@ -60,6 +62,9 @@ graph LR;
         userInput
         userInputCheck
     end
+
+    chartFile-->chartFileParser
+    audioFile-->audioFileWaveformParser
 
     chartFileParser-->chartFileRender
     audioFileWaveformParser-->audioFileWaveformRenderer
