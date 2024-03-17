@@ -2,14 +2,11 @@
 <html>
   {% render 'head' %}
   <body>
-    <main>
-      <header class="page-header">
-        <a href="/">&#8592; Back to Portfolio</a>
-      </header>
-
-      <div class="case-study">
-        {{ content }}
-      </div>
+    <header class="page-header">
+      <a href="/">&#8592; Back to Portfolio</a>
+    </header>
+    <main class="case-study">
+      {{ content }}
     </main>
 
     {% mermaid_js %}
