@@ -1,15 +1,9 @@
 {
   "arrowParens": "avoid",
   "singleQuote": true,
-  "tabWidth": 4,
+  "tabWidth": 2,
   "trailingComma": "none",
   "overrides": [
-    {
-      "files": ["*.json", ".*rc", "*.yml"],
-      "options": {
-        "tabWidth": 2
-      }
-    },
     {
       "files": ["*.liquid"],
       "options": {
