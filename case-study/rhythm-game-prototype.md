@@ -38,11 +38,13 @@ The basic architecture for this prototype would look like this:
 ```mermaid
 graph LR;
     chartFile["Chart File"]
-    chartFileParser["Chart File Parser"]
+    chartFileParserCpp["Chart File Parser"]
+    chartFileParserCsharp["Chart File Parser"]
     chartFileRender["Chart File Renderer"]
 
     audioFile["Audio File"]
-    audioFileWaveformParser["Audio File Waveform Parser"]
+    audioFileWaveformParserCpp["Audio File Waveform Parser"]
+    audioFileWaveformParserCsharp["Audio File Waveform Parser"]
     audioFileWaveformRenderer["Audio File Waveform Renderer"]
 
     trackRenderer["Track Renderer"]
@@ -50,9 +52,14 @@ graph LR;
     userInput["User Input"]
     userInputCheck["User Input Check"]
 
+    subgraph cpp ["C++"]
+        chartFileParserCpp
+        audioFileWaveformParserCpp
+    end
+
     subgraph csharp ["C#"]
-        chartFileParser
-        audioFileWaveformParser
+        chartFileParserCsharp
+        audioFileWaveformParserCsharp
     end
 
     subgraph unity ["Unity"]
@@ -63,17 +70,19 @@ graph LR;
         userInputCheck
     end
 
-    chartFile-->chartFileParser
-    audioFile-->audioFileWaveformParser
+    chartFile-->chartFileParserCsharp
+    audioFile-->audioFileWaveformParserCsharp
 
-    chartFileParser-->chartFileRender
-    audioFileWaveformParser-->audioFileWaveformRenderer
+    chartFileParserCpp-->chartFileParserCsharp
+    chartFileParserCsharp-->chartFileRender
+    audioFileWaveformParserCpp-->audioFileWaveformParserCsharp
+    audioFileWaveformParserCsharp-->audioFileWaveformRenderer
 
     chartFileRender-->trackRenderer
     audioFileWaveformRenderer-->trackRenderer
 
     userInput-->userInputCheck
-    chartFileParser-->userInputCheck
+    chartFileParserCsharp-->userInputCheck
 ```
 
 ## Results
