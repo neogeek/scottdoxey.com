@@ -326,12 +326,10 @@ p > img {
   }
 
   .project .project-preview .align-middle {
-    margin-top: 0;
     border-radius: 1rem 0 0 1rem;
   }
 
   .project .project-preview .align-bottom {
-    margin-top: 0;
     border-radius: 0.5rem 0 0 0;
   }
 }
