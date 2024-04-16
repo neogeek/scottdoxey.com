@@ -29,7 +29,7 @@ My secondary objective was to make it so you could use any device to play the ga
 
 ## Implementation
 
-To create this prototype, I had one specific requirement I wanted to adhere to: create as many components of the prototype as possible in native C#. This would allow the majority of the project to be built and tested outside of Unity. It would also have the added benefit of being portable to other engines.
+To create this prototype, I had one specific requirement I wanted to adhere to: create as much of the logic in C++ and C# as possible. This would allow the majority of the project to be built and tested outside of Unity. It would also have the added benefit of being portable to other engines.
 
 I also wanted to make sure the song files were stable. At first, I started authoring song files based on a custom file format I created. I quickly realized what I was building wouldn't cut it and needed to be reworked. While looking for inspiration online, I learned about Clone Hero, a rhythm game similar to Guitar Hero and Rock Band, and their custom file format: chart files. The more I learned about them, the more I realized they were my prototype's only choice for storing songs.
 
