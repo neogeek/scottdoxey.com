@@ -6,6 +6,8 @@ layout: case-study.liquid
 
 > **Role:** Programmer
 
+![](../../images/projects/rhythm-game-utilities/screenshot.png)
+
 ## Summary
 
 I've been fascinated with music games for a very long time. From my first time playing [Tap Tap Revenge](https://en.wikipedia.org/wiki/Tap_Tap_Revenge) on my first iPod Touch to the countless hours I've played either Guitar Hero or Rock Band with friends. Because of this fascination, it makes sense that I would find myself building a game with a music component.
@@ -87,7 +89,7 @@ graph LR;
 
 ## Results
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZuBhR2HVpRg?si=GcQanQDObQBwaKEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WSMoc8Y1FOE?si=yG__n1fUNcQMQ2_n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Challenges and Solutions
 

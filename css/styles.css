@@ -314,6 +314,7 @@ p > img {
 @media (min-width: 70rem) {
   .project .project-preview img,
   .project .project-preview video {
+    display: block;
     margin: 0;
     width: 100%;
     border-radius: 0;

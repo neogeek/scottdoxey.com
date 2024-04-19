@@ -34,11 +34,26 @@ layout: base.liquid
       </div>
     </div>
     <figure class="project-preview" style="align-items: center">
-      <img
-        src="/images/projects/rhythm-game-utilities/screenshot.png"
-        alt="Screenshot of a demo made using the rhythm-game-utilities package."
-        class="dropshadow align-middle"
-      />
+      <video
+        width="500"
+        height="280"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload
+        poster="images/projects/rhythm-game-utilities/rhythm-game-utilities-demo.png"
+        class="align-middle"
+      >
+        <source
+          src="/images/projects/rhythm-game-utilities/rhythm-game-utilities-demo.webm"
+          type="video/webm"
+        />
+        <source
+          src="/images/projects/rhythm-game-utilities/rhythm-game-utilities-demo.mp4"
+          type="video/mp4"
+        />
+      </video>
     </figure>
   </section>
 
@@ -149,7 +164,7 @@ layout: base.liquid
       </div>
     </div>
     <figure class="project-preview" style="align-items: center">
-      <picture class="dropshadow align-bottom">
+      <picture class="dropshadow align-middle">
         <source
           srcset="/images/projects/secret-scene/screenshot-dark.png"
           media="(prefers-color-scheme: dark)"
