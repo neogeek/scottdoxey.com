@@ -1,0 +1,136 @@
+.projects-main,
+.projects-mini {
+  margin: 2rem auto;
+  display: flex;
+  max-width: 80rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 70rem) {
+  .projects-mini {
+    flex-direction: row;
+  }
+}
+
+.project {
+  color: var(--project-foreground-color);
+  background-color: var(--project-background-color);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+@media (min-width: 70rem) {
+  .projects-main .project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: 'details media' 'links media';
+  }
+
+  .projects-mini .project {
+    display: grid;
+    grid-template-areas: 'details' 'links';
+    flex: 1;
+    font-size: 0.8em;
+    flex-basis: calc(50% - 2rem);
+  }
+}
+
+.project .project-details {
+  padding: 2rem 2rem 0 2rem;
+}
+
+@media (min-width: 70rem) {
+  .project .project-details {
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    grid-area: details;
+  }
+}
+
+.project .project-details .project-icon {
+  margin-bottom: 1rem;
+}
+
+.project .project-details h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project .project-details p {
+  padding: 1rem 0;
+}
+
+.project .project-links {
+  padding: 0 0 2rem 2rem;
+}
+
+@media (min-width: 70rem) {
+  .project .project-links {
+    padding: 0 0 2.5rem 2.5rem;
+    grid-area: links;
+    display: flex;
+    align-items: end;
+  }
+}
+
+.project .project-links .button {
+  text-decoration: none;
+  margin: 1.5rem 1rem 0 0;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: normal;
+  border-radius: 0.5rem;
+  color: #333;
+  white-space: nowrap;
+  background-color: #eee;
+  outline-color: var(--button-outline-color);
+  outline-width: 0.2rem;
+  outline-offset: 0.15rem;
+  outline-style: solid;
+}
+
+.project .project-links .button:active,
+.project .project-links .button:focus,
+.project .project-links .button:hover {
+  outline-color: var(--button-outline-active-color);
+}
+
+.project .project-links .button.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.project .project-links .button [class^='fa-'] {
+  margin-right: 0.25rem;
+}
+
+.project .project-media {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  grid-area: media;
+}
+
+.project .project-media img,
+.project .project-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  flex: 1;
+}
+
+@media (min-width: 70rem) {
+  .project .project-media img,
+  .project .project-media video {
+    display: block;
+    margin: 2rem 0 2rem 0;
+    width: 100%;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -3px 10px 15px 0 rgb(0 0 0 / 0.1),
+      -4px 4px 6px 0 rgb(0 0 0 / 0.1);
+  }
+}

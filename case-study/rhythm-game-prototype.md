@@ -1,12 +1,8 @@
----
-layout: case-study.liquid
----
-
 # Rhythm Game Prototype
 
 > **Role:** Programmer
 
-![](../../images/projects/rhythm-game-utilities/screenshot.png)
+![](../../images/projects/rhythm-game-utilities/rhythm-game-utilities-demo.png)
 
 ## Summary
 
@@ -37,7 +33,7 @@ I also wanted to make sure the song files were stable. At first, I started autho
 
 The basic architecture for this prototype would look like this:
 
-```mermaid
+<pre class="mermaid">
 graph LR;
     chartFile["Chart File"]
     chartFileParserCpp["Chart File Parser"]
@@ -85,7 +81,7 @@ graph LR;
 
     userInput-->userInputCheck
     chartFileParserCsharp-->userInputCheck
-```
+</pre>
 
 ## Results
 

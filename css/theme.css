@@ -1,0 +1,39 @@
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+
+  :root {
+    --link-color: #f22671;
+    --main-foreground-color: #222;
+    --main-background-color: #f3f4f6;
+    --project-foreground-color: #222;
+    --project-background-color: #fff;
+    --button-outline-color: rgba(100, 100, 100, 0.5);
+    --button-outline-active-color: #f22671;
+    --social-icon-color: #666;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  :root {
+    --link-color: #f22671;
+    --main-foreground-color: #fff;
+    --main-background-color: #222;
+    --project-foreground-color: #fff;
+    --project-background-color: #2f3234;
+    --button-outline-color: rgba(100, 100, 100, 0.5);
+    --button-outline-active-color: #f22671;
+    --social-icon-color: #f22671;
+  }
+}
+
+:root {
+  --itch-button-outline-color: rgba(223, 80, 80, 0.3);
+  --itch-button-outline-active-color: rgb(223, 80, 80);
+  --itch-button-background-color: rgb(223, 80, 80);
+}

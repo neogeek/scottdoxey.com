@@ -2,13 +2,5 @@
   "arrowParens": "avoid",
   "singleQuote": true,
   "tabWidth": 2,
-  "trailingComma": "none",
-  "overrides": [
-    {
-      "files": ["*.liquid"],
-      "options": {
-        "singleQuote": false
-      }
-    }
-  ]
+  "trailingComma": "none"
 }

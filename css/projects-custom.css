@@ -1,0 +1,163 @@
+@media (min-width: 70rem) {
+  .project#rhythm-game-utilities .project-media video {
+    box-shadow: none;
+  }
+}
+
+.project#handcrank-engine {
+  color: #fff;
+  background-color: #5d5ba5;
+}
+
+.project#handcrank-engine .button {
+  --button-outline-color: rgba(255, 255, 255, 0.3);
+  --button-outline-active-color: rgb(255, 255, 255);
+}
+
+@media (min-width: 70rem) {
+  .project#handcrank-engine .project-media video {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 70rem) {
+  .project#qr-code-generator .project-media img {
+    box-shadow: none;
+  }
+}
+
+.project#qr-code-generator .project-media img {
+  margin: 0;
+  padding: 1rem;
+}
+
+.project#secret-scene .project-media {
+  align-items: end;
+}
+
+.project#secret-scene .project-media img {
+  margin: 2rem 1rem 0 1rem;
+  width: calc(100% - 2rem);
+  border-radius: 0;
+}
+
+.project#generate-local-changelog .project-media {
+  align-items: end;
+}
+
+@media (min-width: 70rem) {
+  .project#generate-local-changelog .project-media img {
+    margin: 2rem 0 0 0;
+    border-radius: 0.5rem 0 0 0;
+  }
+}
+
+.project#flip-jacks {
+  color: #eee;
+  background-color: #06311d;
+}
+
+@media (min-width: 70rem) {
+  .project#flip-jacks {
+    grid-template-areas: 'details media' 'links links';
+  }
+}
+
+.project#flip-jacks .project-icon {
+  border-radius: 1rem;
+}
+
+@media (min-width: 70rem) {
+  .project#flip-jacks .project-media video {
+    margin: 2rem 0 1rem 0;
+    box-shadow: none;
+  }
+}
+
+.project#flip-jacks .button {
+  color: #06311d;
+  --button-outline-color: rgba(227, 230, 1, 0.353);
+  --button-outline-active-color: rgb(227, 230, 1);
+  background-color: rgb(227, 230, 1);
+}
+
+.project#candycoded .project-media {
+  align-items: end;
+}
+
+@media (min-width: 70rem) {
+  .project#candycoded .project-media img {
+    margin: 2rem 0 0 0;
+    border-radius: 0.5rem 0 0 0;
+  }
+}
+
+.project#doxdox {
+  color: #fff;
+  background-color: #311641;
+}
+
+.project#doxdox .project-media {
+  align-items: end;
+}
+
+@media (min-width: 70rem) {
+  .project#doxdox .project-media img {
+    margin: 2rem 0 0 0;
+    border-radius: 0.5rem 0 0 0;
+  }
+}
+
+.project#doxdox .button {
+  color: #311641;
+  --button-outline-color: rgba(227, 230, 1, 0.353);
+  --button-outline-active-color: rgb(227, 230, 1);
+  background-color: rgb(227, 230, 1);
+}
+
+.project#match-attack {
+  color: #fff;
+  background-color: #444230;
+}
+
+.project#match-attack .project-media img {
+  margin: 0;
+  padding: 1rem;
+}
+
+@media (min-width: 70rem) {
+  .project#match-attack .project-media img {
+    box-shadow: none;
+  }
+}
+
+.project#match-attack .button {
+  color: #fff;
+  --button-outline-color: var(--itch-button-outline-color);
+  --button-outline-active-color: var(--itch-button-outline-active-color);
+  background-color: var(--itch-button-background-color);
+}
+
+@media (min-width: 70rem) {
+  .project#cards-against-undefined .project-media {
+    align-items: end;
+  }
+
+  .project#cards-against-undefined .project-media img {
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 70rem) {
+  .project#smoothie-operator .project-media video {
+    box-shadow: none;
+  }
+}
+
+.project#smoothie-operator .button {
+  color: #fff;
+  --button-outline-color: var(--itch-button-outline-color);
+  --button-outline-active-color: var(--itch-button-outline-active-color);
+  background-color: var(--itch-button-background-color);
+}
