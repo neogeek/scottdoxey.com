@@ -1,4 +1,4 @@
-import html from '../utilities/html.mjs';
+import html from '../_utilities/html.mjs';
 
 export default html`<header class="page-header">
     <img

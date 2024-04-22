@@ -2,9 +2,9 @@ import { readFile } from 'node:fs/promises';
 
 import { marked } from 'marked';
 
-import html from '../utilities/html.mjs';
+import html from '../_utilities/html.mjs';
 
-import head from '../includes/head.mjs';
+import head from '../_includes/head.mjs';
 
 process.stdout.write(html`<!DOCTYPE html>
   <html lang="en">

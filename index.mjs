@@ -1,10 +1,10 @@
 import { readFile } from 'node:fs/promises';
 
-import html from './utilities/html.mjs';
+import html from './_utilities/html.mjs';
 
-import head from './includes/head.mjs';
-import header from './includes/header.mjs';
-import footer from './includes/footer.mjs';
+import head from './_includes/head.mjs';
+import header from './_includes/header.mjs';
+import footer from './_includes/footer.mjs';
 
 const projectData = JSON.parse(await readFile('./data/projects.json', 'utf8'));
 
