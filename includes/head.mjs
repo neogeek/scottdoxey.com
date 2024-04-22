@@ -1,4 +1,4 @@
-<head>
+export default `<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1" />
   <title>
@@ -54,4 +54,4 @@
     property="og:image"
     content="https://scottdoxey.com/images/poster.png"
   />
-</head>
+</head>`;

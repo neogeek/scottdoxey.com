@@ -1,4 +1,4 @@
-<header class="page-header">
+export default `<header class="page-header">
   <img
     src="/images/avatar.png"
     width="200"
@@ -15,9 +15,9 @@
       developer and designer.
     </h2>
   </div>
-</header>
+  </header>
 
-<div class="page-bio">
+  <div class="page-bio">
   <p>
     I've released
     <b>150+ open source projects</b> on <i class="fa-brands fa-github"></i>
@@ -39,9 +39,9 @@
     and I'm working on an AR game for mobile platforms called 🃏
     <a href="https://flipjacksgame.com">Flip Jacks</a>.
   </p>
-</div>
+  </div>
 
-<nav class="page-nav">
+  <nav class="page-nav">
   <ul class="social-links">
     <li>
       <i class="fa-solid fa-pen-nib"></i> <a href="https://neogeek.dev">Blog</a>
@@ -67,4 +67,4 @@
       <a href="https://scottdoxey.itch.io/">Itch.io</a>
     </li>
   </ul>
-</nav>
+</nav>`;

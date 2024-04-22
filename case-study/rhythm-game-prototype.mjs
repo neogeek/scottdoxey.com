@@ -2,8 +2,8 @@ import { readFile } from 'node:fs/promises';
 
 import { marked } from 'marked';
 
-const head = await readFile('../includes/head.html', 'utf8');
-const footer = await readFile('../includes/footer.html', 'utf8');
+import head from '../includes/head.mjs';
+import footer from '../includes/footer.mjs';
 
 const markdown = await readFile('./rhythm-game-prototype.md', 'utf8');
 

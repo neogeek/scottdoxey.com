@@ -1,8 +1,8 @@
 import { readFile } from 'node:fs/promises';
 
-const head = await readFile('./includes/head.html', 'utf8');
-const header = await readFile('./includes/header.html', 'utf8');
-const footer = await readFile('./includes/footer.html', 'utf8');
+import head from './includes/head.mjs';
+import header from './includes/header.mjs';
+import footer from './includes/footer.mjs';
 
 const projectData = JSON.parse(await readFile('./data/projects.json', 'utf8'));
 

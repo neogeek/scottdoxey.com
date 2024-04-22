@@ -8,7 +8,7 @@ mkdir -p build/
 
 printf "Building dynamic files "
 
-find . -type f -name "*.mjs" -not -path "./node_modules/*" | while read -r FILEPATH; do
+find . -type f -name "*.mjs" -not -path "./node_modules/*" -not -path "./includes/*" | while read -r FILEPATH; do
     DIR=$(dirname "${FILEPATH}")
     FILENAME=$(basename "${FILEPATH}")
 
