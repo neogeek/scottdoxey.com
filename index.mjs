@@ -33,19 +33,17 @@ const renderProjectLinks = project => {
   }
 
   return html`<div class="project-links">
-    ${project.links
-      .map(link => {
-        const label = link.icon
-          ? html`<i class="${link.icon}"></i> ${link.label}`
-          : link.label;
+    ${project.links.map(link => {
+      const label = link.icon
+        ? html`<i class="${link.icon}"></i> ${link.label}`
+        : link.label;
 
-        if (link.url) {
-          return html`<a href="${link.url}" class="button">${label}</a>`;
-        } else {
-          return html`<a href="#" class="button disabled">${label}</a>`;
-        }
-      })
-      .join('\n')}
+      if (link.url) {
+        return html`<a href="${link.url}" class="button">${label}</a>`;
+      } else {
+        return html`<a href="#" class="button disabled">${label}</a>`;
+      }
+    })}
   </div>`;
 };
 
@@ -57,15 +55,10 @@ const renderProjectMediaImage = project => {
   return html`<figure class="project-media">
     <picture class="dropshadow">
       ${project.image.sources?.length > 0
-        ? project.image.sources
-            .map(
-              source =>
-                html`<source
-                  srcset="${source.srcset}"
-                  media="${source.media}"
-                />`
-            )
-            .join('\n')
+        ? project.image.sources.map(
+            source =>
+              html`<source srcset="${source.srcset}" media="${source.media}" />`
+          )
         : ''}
       <img src="${project.image.src}" alt="${project.image.alt}" width="600" />
     </picture>
@@ -87,11 +80,9 @@ const renderProjectMediaVideo = project => {
       preload
       poster="${project.video.poster}"
     >
-      ${project.video.sources
-        ?.map(
-          source => html`<source src="${source.src}" type="${source.type}" />`
-        )
-        .join('\n')}
+      ${project.video.sources?.map(
+        source => html`<source src="${source.src}" type="${source.type}" />`
+      )}
     </video>
   </figure>`;
 };
@@ -111,14 +102,12 @@ process.stdout.write(html`<!DOCTYPE html>
       <main class="projects-main">
         ${projectData
           .filter(project => project.image || project.video)
-          .map(renderProject)
-          .join('\n')}
+          .map(renderProject)}
       </main>
       <div class="projects-mini">
         ${projectData
           .filter(project => !project.image && !project.video)
-          .map(renderProject)
-          .join('\n')}
+          .map(renderProject)}
       </div>
       ${footer}
     </body>
