@@ -6,113 +6,121 @@ import footer from './includes/footer.mjs';
 
 const projectData = JSON.parse(await readFile('./data/projects.json', 'utf8'));
 
-const renderProject = project => {
-  process.stdout.write(`<section class="project" id="${project.id}">
-<div class="project-details">
+const renderProjectDetails = project => {
+  return `<div class="project-details">
+  ${
+    project.icon
+      ? `<img
+    src="${project.icon.src}"
+    width="100"
+    class="project-icon"
+    alt="${project.icon.alt}"
+  />`
+      : ''
+  }
+  <h2>
     ${
-      project.icon
-        ? `<img
-      src="${project.icon.src}"
-      width="100"
-      class="project-icon"
-      alt="${project.icon.alt}"
-    />`
-        : ''
+      project.url
+        ? `<a href="${project.url}">${project.name}</a>`
+        : project.name
     }
-    <h2>
-      ${
-        project.url
-          ? `<a href="${project.url}">${project.name}</a>`
-          : project.name
-      }
-    </h2>
-    <p>${project.description}</p>
-</div>
-${
-  project.links?.length > 0
-    ? `<div class="project-links">
-  ${project.links
-    .map(link => {
-      const label = link.icon
-        ? `<i class="${link.icon}"></i> ${link.label}`
-        : link.label;
-
-      if (link.url) {
-        return `<a href="${link.url}" class="button">${label}</a>`;
-      } else {
-        return `<a href="#" class="button disabled">${label}</a>`;
-      }
-    })
-    .join('\n')}
-  </div>`
-    : ''
-}
-${
-  project.image
-    ? `<figure class="project-media">
-    <picture class="dropshadow">
-      ${
-        project.image.sources?.length > 0
-          ? project.image.sources
-              .map(source => {
-                return `<source srcset="${source.srcset}" media="${source.media}" />`;
-              })
-              .join('\n')
-          : ''
-      }
-      <img src="${project.image.src}" alt="${project.image.alt}" width="600" />
-    </picture>
-  </figure>`
-    : ''
-}
-${
-  project.video
-    ? `<figure class="project-media">
-    <video
-      width="500"
-      autoplay
-      loop
-      muted
-      playsinline
-      preload
-      poster="${project.video.poster}"
-    >
-      ${project.video.sources
-        ?.map(source => {
-          return `<source src="${source.src}" type="${source.type}" />`;
-        })
-        .join('\n')}
-    </video>
-  </figure>`
-    : ''
-}
-</section>\n`);
+  </h2>
+  <p>${project.description}</p>
+</div>`;
 };
 
-process.stdout.write(`<!doctype html><html lang="en">`);
+const renderProjectLinks = project => {
+  if (!project.links?.length) {
+    return '';
+  }
 
-process.stdout.write(head);
+  return `<div class="project-links">
+    ${project.links
+      .map(link => {
+        const label = link.icon
+          ? `<i class="${link.icon}"></i> ${link.label}`
+          : link.label;
 
-process.stdout.write(`<body>`);
+        if (link.url) {
+          return `<a href="${link.url}" class="button">${label}</a>`;
+        } else {
+          return `<a href="#" class="button disabled">${label}</a>`;
+        }
+      })
+      .join('\n')}
+    </div>`;
+};
 
-process.stdout.write(header);
+const renderProjectMediaImage = project => {
+  if (!project.image) {
+    return '';
+  }
 
-process.stdout.write(`<main class="projects-main">\n`);
+  return `<figure class="project-media">
+  <picture class="dropshadow">
+    ${
+      project.image.sources?.length > 0
+        ? project.image.sources
+            .map(
+              source =>
+                `<source srcset="${source.srcset}" media="${source.media}" />`
+            )
+            .join('\n')
+        : ''
+    }
+    <img src="${project.image.src}" alt="${project.image.alt}" width="600" />
+  </picture>
+</figure>`;
+};
 
-projectData
-  .filter(project => project.image || project.video)
-  .forEach(renderProject);
+const renderProjectMediaVideo = project => {
+  if (!project.video) {
+    return '';
+  }
 
-process.stdout.write(`</main>\n`);
+  return `<figure class="project-media">
+  <video
+    width="500"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload
+    poster="${project.video.poster}"
+  >
+    ${project.video.sources
+      ?.map(source => `<source src="${source.src}" type="${source.type}" />`)
+      .join('\n')}
+  </video>
+</figure>`;
+};
 
-process.stdout.write(`<div class="projects-mini">\n`);
+const renderProject = project => {
+  return `<section class="project" id="${project.id}">
+  ${renderProjectDetails(project)}
+  ${renderProjectLinks(project)}
+  ${renderProjectMediaImage(project)}
+  ${renderProjectMediaVideo(project)}
+</section>\n`;
+};
 
-projectData
-  .filter(project => !project.image && !project.video)
-  .forEach(renderProject);
-
-process.stdout.write(`</div>\n`);
-
-process.stdout.write(footer);
-
-process.stdout.write('</body></html>');
+process.stdout.write(`<!doctype html>
+  <html lang="en">
+  ${head}
+  <body>
+    ${header}
+    <main class="projects-main">
+      ${projectData
+        .filter(project => project.image || project.video)
+        .map(renderProject)
+        .join('\n')}
+    </main>
+    <div class="projects-mini">
+      ${projectData
+        .filter(project => !project.image && !project.video)
+        .map(renderProject)
+        .join('\n')}
+    </div>
+    ${footer}
+  </body>
+</html>`);
