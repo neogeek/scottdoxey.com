@@ -7,11 +7,13 @@
     "links": [
       {
         "url": "https://github.com/neogeek/rhythm-game-utilities/",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       },
       {
         "url": "/case-study/rhythm-game-prototype/",
-        "label": "<i class=\"fa-solid fa-book\"></i> Case Study"
+        "label": "Case Study",
+        "icon": "fa-solid fa-book"
       }
     ],
     "video": {
@@ -36,7 +38,8 @@
     "links": [
       {
         "url": "https://github.com/HandcrankEngine/HandcrankEngine/",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ],
     "video": {
@@ -65,7 +68,8 @@
       },
       {
         "url": "https://github.com/neogeek/qr-code-generator/",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ],
     "image": {
@@ -101,7 +105,8 @@
     "links": [
       {
         "url": "https://github.com/neogeek/generate-local-changelog",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ],
     "image": {
@@ -121,14 +126,17 @@
     "links": [
       {
         "url": "https://play.google.com/store/apps/details?id=com.thelast90percent.flipjacks",
-        "label": "<i class=\"fa-brands fa-google-play\"></i> Google Play"
+        "label": "Google Play",
+        "icon": "fa-brands fa-google-play"
       },
       {
-        "label": "<i class=\"fa-brands fa-app-store-ios\"></i> iOS App Store"
+        "label": "iOS App Store",
+        "icon": "fa-brands fa-app-store-ios"
       },
       {
         "url": "https://scottdoxey.itch.io/flip-jacks/",
-        "label": "<i class=\"fa-brands fa-itch-io\"></i> Play Game Online"
+        "label": "Play Game Online",
+        "icon": "fa-brands fa-itch-io"
       },
       {
         "url": "https://flipjacksgame.com/",
@@ -161,7 +169,8 @@
     "links": [
       {
         "url": "https://github.com/CandyCoded/CandyCoded",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ],
     "image": {
@@ -185,7 +194,8 @@
       },
       {
         "url": "https://github.com/docsbydoxdox/doxdox",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ],
     "image": {
@@ -205,11 +215,13 @@
     "links": [
       {
         "url": "https://scottdoxey.itch.io/match-attack",
-        "label": "<i class=\"fa-brands fa-itch-io\"></i> Play Game Online"
+        "label": "Play Game Online",
+        "icon": "fa-brands fa-itch-io"
       },
       {
         "url": "https://github.com/neogeek/match-attack-ggj-2021",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ],
     "image": {
@@ -233,7 +245,8 @@
       },
       {
         "url": "https://github.com/neogeek/cards-against-undefined",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ],
     "image": {
@@ -253,11 +266,13 @@
     "links": [
       {
         "url": "https://scottdoxey.itch.io/smoothie-operator-unity-port",
-        "label": "<i class=\"fa-brands fa-itch-io\"></i> Play Game Online"
+        "label": "Play Game Online",
+        "icon": "fa-brands fa-itch-io"
       },
       {
         "url": "https://github.com/neogeek/Smoothie-Operator",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ],
     "video": {
@@ -286,7 +301,8 @@
       },
       {
         "url": "https://github.com/neogeek/topdown",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ],
     "image": {
@@ -302,7 +318,8 @@
     "links": [
       {
         "url": "https://github.com/neogeek/get-unity",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ]
   },
@@ -314,7 +331,8 @@
     "links": [
       {
         "url": "https://github.com/neogeek/create-app",
-        "label": "<i class=\"fa-brands fa-github\"></i> GitHub"
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
       }
     ]
   }

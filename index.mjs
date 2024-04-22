@@ -33,10 +33,14 @@ ${
     ? `<div class="project-links">
   ${project.links
     .map(link => {
+      const label = link.icon
+        ? `<i class="${link.icon}"></i> ${link.label}`
+        : link.label;
+
       if (link.url) {
-        return `<a href="${link.url}" class="button">${link.label}</a>`;
+        return `<a href="${link.url}" class="button">${label}</a>`;
       } else {
-        return `<a href="#" class="button disabled">${link.label}</a>`;
+        return `<a href="#" class="button disabled">${label}</a>`;
       }
     })
     .join('\n')}
