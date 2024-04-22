@@ -43,3 +43,7 @@ jobs:
 
       - name: Sync files to S3 bucket
         run: aws s3 sync build s3://scottdoxey.com --delete --exclude '.DS_Store'
+
+      - name: Clear Cloudflare Cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_AUTH_TOKEN }}" -H "Content-Type:application/json" --data '{"purge_everything":true}'
