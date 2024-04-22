@@ -1,4 +1,6 @@
-export default `<head>
+import html from '../utilities/html.mjs';
+
+export default html`<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1" />
   <title>
