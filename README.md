@@ -6,20 +6,12 @@
 
 ## Development
 
-### Building HTML Files
+### Building Site
 
-Any `.mjs` file not in the `utilities/` or `includes/` directory will be run via Node.js, and the output will then be saved to an HTML file and run through Prettier. If the filename is `index.mjs`, it will be saved as `index.html`, but if it is anything else, it will be saved as `filename/index.html`.
-
-```bash
-$ make build
-```
-
-### Copying Static Files
-
-By default, all files in the `css/` and `images/` folders are copied to the `build/` directory. Add any additional files that need to be copied to the `build/` directory to the `./bin/copy.sh` script.
+This site uses the NPM package [onlybuild](https://github.com/neogeek/onlybuild).
 
 ```bash
-$ make copy
+$ npm run build
 ```
 
 ### Running Local Server
