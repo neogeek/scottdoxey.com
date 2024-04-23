@@ -1,4 +1,4 @@
-import html from '../_utilities/html.mjs';
+import { html } from 'onlybuild';
 
 export default html`<head>
   <meta charset="utf-8" />

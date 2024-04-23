@@ -1,12 +1,12 @@
 import { readFile } from 'node:fs/promises';
 
-import { marked } from 'marked';
+import { html } from 'onlybuild';
 
-import html from '../_utilities/html.mjs';
+import { marked } from 'marked';
 
 import head from '../_includes/head.mjs';
 
-process.stdout.write(html`<!DOCTYPE html>
+export default html`<!DOCTYPE html>
   <html lang="en">
     ${head}
     <body>
@@ -14,8 +14,10 @@ process.stdout.write(html`<!DOCTYPE html>
         <a href="/">&#8592; Back to Portfolio</a>
       </header>
       <main class="case-study">
-        ${marked.parse(await readFile('./rhythm-game-prototype.md', 'utf8'))}
+        ${marked.parse(
+          await readFile('./case-study/rhythm-game-prototype.md', 'utf8')
+        )}
       </main>
       <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
     </body>
-  </html>`);
+  </html>`;

@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 
-import html from './_utilities/html.mjs';
+import { html } from 'onlybuild';
 
 import head from './_includes/head.mjs';
 import header from './_includes/header.mjs';
@@ -94,7 +94,7 @@ const renderProject = project => {
   </section>`;
 };
 
-process.stdout.write(html`<!DOCTYPE html>
+export default html`<!DOCTYPE html>
   <html lang="en">
     ${head}
     <body>
@@ -111,4 +111,4 @@ process.stdout.write(html`<!DOCTYPE html>
       </div>
       ${footer}
     </body>
-  </html>`);
+  </html>`;
