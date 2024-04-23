@@ -1,5 +1,22 @@
 [
   {
+    "id": "onlybuild",
+    "url": "https://github.com/neogeek/onlybuild",
+    "name": "onlybuild",
+    "description": "A zero-config cli for building static websites.",
+    "links": [
+      {
+        "url": "https://github.com/neogeek/onlybuild/",
+        "label": "GitHub",
+        "icon": "fa-brands fa-github"
+      }
+    ],
+    "image": {
+      "src": "/images/projects/onlybuild/readme.png",
+      "alt": "Screenshot of the README.md for the onlybuild repo detailing the features included in the project."
+    }
+  },
+  {
     "id": "rhythm-game-utilities",
     "url": "https://github.com/neogeek/rhythm-game-utilities",
     "name": "Rhythm Game Utilities",

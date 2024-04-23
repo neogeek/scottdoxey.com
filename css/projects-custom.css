@@ -1,3 +1,14 @@
+.project#onlybuild .project-media {
+  align-items: end;
+}
+
+@media (min-width: 70rem) {
+  .project#onlybuild .project-media img {
+    margin: 2rem 0 0 0;
+    border-radius: 0.5rem 0 0 0;
+  }
+}
+
 @media (min-width: 70rem) {
   .project#rhythm-game-utilities .project-media video {
     box-shadow: none;
