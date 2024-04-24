@@ -96,7 +96,9 @@ const renderProject = project => {
 
 export default html`<!DOCTYPE html>
   <html lang="en">
-    ${head}
+    <head>
+      ${head}
+    </head>
     <body>
       ${header}
       <main class="projects-main">

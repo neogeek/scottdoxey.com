@@ -8,7 +8,9 @@ import head from '../_includes/head.mjs';
 
 export default html`<!DOCTYPE html>
   <html lang="en">
-    ${head}
+    <head>
+      ${head}
+    </head>
     <body>
       <header class="page-header">
         <a href="/">&#8592; Back to Portfolio</a>

@@ -1,6 +1,8 @@
 {
   "name": "scottdoxey.com",
   "devDependencies": {
+    "highlight.js": "11.9.0",
+    "marked-highlight": "2.1.1",
     "marked": "12.0.2",
     "onlybuild": "1.0.0"
   },

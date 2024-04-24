@@ -1,6 +1,6 @@
 import { html } from 'onlybuild';
 
-export default html`<head>
+export default html`
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1" />
   <title>
@@ -56,4 +56,4 @@ export default html`<head>
     property="og:image"
     content="https://scottdoxey.com/images/poster.png"
   />
-</head>`;
+`;
