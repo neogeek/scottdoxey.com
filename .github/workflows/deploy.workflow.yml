@@ -31,16 +31,16 @@ jobs:
       - name: Build Site
         run: npm run build
 
-      - name: Set AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
-
-      - name: Sync files to S3 bucket
-        run: aws s3 sync build s3://scottdoxey.com --delete --exclude '.DS_Store'
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: scottdoxey
+          directory: build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
 
       - name: Clear Cloudflare Cache
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_AUTH_TOKEN }}" -H "Content-Type:application/json" --data '{"purge_everything":true}'
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" -H "Content-Type:application/json" --data '{"purge_everything":true}'
