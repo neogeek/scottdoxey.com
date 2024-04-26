@@ -7,7 +7,9 @@
     "onlybuild": "1.0.0"
   },
   "scripts": {
-    "build": "onlybuild"
+    "build": "onlybuild",
+    "watch": "npx nodemon --ext mjs,md,css --ignore ./build -x \"npm run build\"",
+    "serve": "npx http-server build"
   },
   "private": true
 }
