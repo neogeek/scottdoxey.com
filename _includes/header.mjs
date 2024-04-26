@@ -38,7 +38,7 @@ export default html`<header class="page-header">
       <a href="https://purplemonkeygamejam.com">Purple Monkey Game Jam</a>,
       given talks at
       <a href="https://www.meetup.com/bostongamedev/">Boston Game Dev</a>
-      meetups, and I'm working on an AR game for mobile platforms called 🃏
+      meetups, and I just released my first game for mobile platforms called 🃏
       <a href="https://flipjacksgame.com">Flip Jacks</a>.
     </p>
   </div>
