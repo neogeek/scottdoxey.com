@@ -58,6 +58,12 @@ export default html`<header class="page-header">
         <a href="https://www.linkedin.com/in/neogeek">LinkedIn</a>
       </li>
       <li>
+        <i class="fa-brands fa-stack-overflow"></i>
+        <a href="https://stackoverflow.com/users/135018/scott-doxey"
+          >Stack Overflow</a
+        >
+      </li>
+      <li>
         <i class="fa-brands fa-speaker-deck"></i>
         <a href="https://speakerdeck.com/neogeek">Speaker Deck</a>
       </li>
