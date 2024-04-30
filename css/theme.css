@@ -4,14 +4,15 @@
   }
 
   :root {
-    --link-color: #f22671;
+    --link-color: #8728e6;
+    --link-hover-color: #fff;
     --main-foreground-color: #222;
     --main-background-color: #f3f4f6;
     --project-foreground-color: #222;
     --project-background-color: #fff;
     --button-outline-color: rgba(100, 100, 100, 0.5);
-    --button-outline-active-color: #f22671;
-    --social-icon-color: #666;
+    --button-outline-active-color: #8728e6;
+    --social-icon-color: #8728e6;
   }
 }
 
@@ -21,14 +22,15 @@
   }
 
   :root {
-    --link-color: #f22671;
+    --link-color: #ebff87;
+    --link-hover-color: #1d1d21;
     --main-foreground-color: #fff;
-    --main-background-color: #222;
+    --main-background-color: #1d1d21;
     --project-foreground-color: #fff;
     --project-background-color: #2f3234;
     --button-outline-color: rgba(100, 100, 100, 0.5);
-    --button-outline-active-color: #f22671;
-    --social-icon-color: #f22671;
+    --button-outline-active-color: #ebff87;
+    --social-icon-color: #ebff87;
   }
 }
 

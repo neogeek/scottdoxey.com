@@ -27,7 +27,7 @@ p a {
 
 p a:active,
 p a:hover {
-  color: #fff;
+  color: var(--link-hover-color);
   background-color: var(--link-color);
   text-decoration: none;
 }

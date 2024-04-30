@@ -75,7 +75,7 @@
 
 .social-links a:active,
 .social-links a:hover {
-  color: #fff;
+  color: var(--link-hover-color);
   background-color: var(--link-color);
   text-decoration: none;
 }
