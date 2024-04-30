@@ -27,6 +27,13 @@ export default html`<header class="page-header">
       <b>150+ open source projects</b> on <i class="fa-brands fa-github"></i>
       <a href="https://github.com/neogeek">GitHub</a>, I've won awards for 🏆
       <b>Best in VR</b> and 🏆 <b>Best of Accessibility</b> at the 2020
+      <img
+        src="/images/reality-hack.png"
+        width="30"
+        height="30"
+        alt="Reality Hack Logo"
+        loading="eager"
+      />
       <a href="https://devpost.com/software/accessibility-toolkit-for-unity"
         >MIT Reality Hack</a
       >, I run the
