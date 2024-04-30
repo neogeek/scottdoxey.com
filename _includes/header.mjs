@@ -4,10 +4,10 @@ import socialLinks from './social-links.mjs';
 
 export default html`<header class="page-header">
     <img
-      src="/images/avatar.png"
+      src="./images/avatar.png"
       width="200"
       height="200"
-      srcset="/images/avatar.png, /images/avatar@2x.png 2x"
+      srcset="./images/avatar.png, /images/avatar@2x.png 2x"
       class="avatar"
       loading="eager"
       alt="Picture of Scott and his cat Ada"
@@ -28,7 +28,7 @@ export default html`<header class="page-header">
       <a href="https://github.com/neogeek">GitHub</a>, I've won awards for 🏆
       <b>Best in VR</b> and 🏆 <b>Best of Accessibility</b> at the 2020
       <img
-        src="/images/reality-hack.png"
+        src="./images/reality-hack.png"
         width="30"
         height="30"
         alt="Reality Hack Logo"
@@ -38,7 +38,7 @@ export default html`<header class="page-header">
         >MIT Reality Hack</a
       >, I run the
       <img
-        src="/images/monkey.png"
+        src="./images/monkey.png"
         width="30"
         height="30"
         alt="Purple Monkey Game Jam Logo"

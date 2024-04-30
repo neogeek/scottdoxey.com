@@ -1,12 +1,10 @@
-import { readFile } from 'node:fs/promises';
-
 import { html } from 'onlybuild';
 
 import head from './_includes/head.mjs';
 import header from './_includes/header.mjs';
 import footer from './_includes/footer.mjs';
 
-const projectData = JSON.parse(await readFile('./_data/projects.json', 'utf8'));
+import projectData from './_data/projects.json' assert { type: 'json' };
 
 const renderProjectDetails = project => {
   return html`<div class="project-details">
