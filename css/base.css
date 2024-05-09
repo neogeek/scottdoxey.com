@@ -35,3 +35,9 @@ p a:hover {
 p > img {
   vertical-align: middle;
 }
+
+code {
+  padding: 0.25rem;
+  color: var(--main-foreground-color);
+  background-color: var(--main-background-color);
+}

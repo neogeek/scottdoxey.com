@@ -47,7 +47,7 @@
     "id": "onlybuild",
     "url": "https://github.com/neogeek/onlybuild",
     "name": "onlybuild",
-    "description": "A zero-config cli for building static websites.",
+    "description": "A zero-config cli for building static websites.<br/><br/>Create a new project quickly using <code>npx create-onlybuild-app@latest</code>.",
     "links": [
       {
         "url": "https://github.com/neogeek/onlybuild/",
