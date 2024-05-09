@@ -4,7 +4,7 @@ import { html } from 'onlybuild';
 
 import { marked } from 'marked';
 
-import head from '../_includes/head.mjs';
+import head from '../_includes/head.js';
 
 export default html`<!DOCTYPE html>
   <html lang="en">

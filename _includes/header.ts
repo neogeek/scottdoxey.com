@@ -1,6 +1,6 @@
 import { html } from 'onlybuild';
 
-import socialLinks from './social-links.mjs';
+import socialLinks from './social-links.js';
 
 export default html`<header class="page-header">
     <img

@@ -7,7 +7,7 @@ import { Marked } from 'marked';
 import { markedHighlight } from 'marked-highlight';
 import hljs from 'highlight.js';
 
-import head from '../_includes/head.mjs';
+import head from '../_includes/head.js';
 
 const marked = new Marked(
   markedHighlight({

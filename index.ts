@@ -1,8 +1,8 @@
 import { html } from 'onlybuild';
 
-import head from './_includes/head.mjs';
-import header from './_includes/header.mjs';
-import footer from './_includes/footer.mjs';
+import head from './_includes/head.js';
+import header from './_includes/header.js';
+import footer from './_includes/footer.js';
 
 import projectData from './_data/projects.json' assert { type: 'json' };
 

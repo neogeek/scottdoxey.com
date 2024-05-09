@@ -1,14 +1,16 @@
 {
   "name": "scottdoxey.com",
+  "type": "module",
   "devDependencies": {
+    "@types/node": "20.12.11",
     "highlight.js": "11.9.0",
-    "marked-highlight": "2.1.1",
     "marked": "12.0.2",
-    "onlybuild": "1.2.0"
+    "marked-highlight": "2.1.1",
+    "onlybuild": "1.4.1"
   },
   "scripts": {
     "build": "onlybuild",
-    "watch": "npx nodemon --ext mjs,md,css --ignore ./build -x \"npm run build\"",
+    "watch": "npx nodemon --ignore ./build -x \"npm run build\"",
     "serve": "npx http-server build"
   },
   "private": true
