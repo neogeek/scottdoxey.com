@@ -142,11 +142,7 @@
     "id": "secret-scene",
     "name": "Secret Scene",
     "description": "An OBS automatic scene switcher for sensitive applications. Works on the same machine OBS is running on or another computer on the same network.",
-    "links": [
-      {
-        "label": "Coming Soon"
-      }
-    ],
+    "links": [],
     "image": {
       "src": "./images/projects/secret-scene/screenshot-dark.webp",
       "alt": "Screenshot of the macOS version of Secret Scene.",
