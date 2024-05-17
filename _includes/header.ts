@@ -33,6 +33,7 @@ export default html`<header class="page-header">
         src="./images/reality-hack.webp"
         width="30"
         height="30"
+        srcset="./images/reality-hack.webp, /images/reality-hack@2x.webp 2x"
         alt="Reality Hack Logo"
         loading="eager"
       />
