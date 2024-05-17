@@ -42,6 +42,11 @@
   padding: 1rem;
 }
 
+.project#secret-scene {
+  color: #fff;
+  background-color: #444;
+}
+
 .project#secret-scene .project-media {
   align-items: end;
 }
@@ -49,7 +54,7 @@
 .project#secret-scene .project-media img {
   margin: 2rem 1rem 0 1rem;
   width: calc(100% - 2rem);
-  border-radius: 0;
+  border-radius: 0.75rem;
 }
 
 .project#generate-local-changelog .project-media {
