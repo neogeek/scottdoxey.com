@@ -132,6 +132,6 @@ export default html`<!DOCTYPE html>
           .map(renderProject)}
       </div>
       ${footer}
-      <script src="js/load-video.js"></script>
+      <script src="js/load-video.js" defer></script>
     </body>
   </html>`;

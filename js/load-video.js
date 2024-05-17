@@ -1,4 +1,6 @@
-{
+(async () => {
+  await new Promise(resolve => setTimeout(resolve, 100));
+
   Array.from(document.querySelectorAll('video')).forEach(video => {
     Array.from(video.querySelectorAll('source[data-src]')).forEach(source => {
       const src = source.getAttribute('data-src');
@@ -9,4 +11,4 @@
 
     video.load();
   });
-}
+})();
