@@ -38,7 +38,7 @@ export default html`<header class="page-header">
         >MIT Reality Hack</a
       >, I run the
       <img
-        src="./images/monkey.png"
+        src="./images/icons/monkey.svg"
         width="30"
         height="30"
         alt="Purple Monkey Game Jam Logo"
