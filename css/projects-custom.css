@@ -152,6 +152,7 @@
 
 .project#match-attack .button {
   color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
   --button-outline-color: var(--itch-button-outline-color);
   --button-outline-active-color: var(--itch-button-outline-active-color);
   background-color: var(--itch-button-background-color);
@@ -159,6 +160,7 @@
 
 .project#match-attack .button .font-awesome {
   fill: #fff;
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.5));
 }
 
 @media (min-width: 70rem) {
@@ -180,6 +182,7 @@
 
 .project#smoothie-operator .button {
   color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
   --button-outline-color: var(--itch-button-outline-color);
   --button-outline-active-color: var(--itch-button-outline-active-color);
   background-color: var(--itch-button-background-color);
@@ -187,4 +190,5 @@
 
 .project#smoothie-operator .button .font-awesome {
   fill: #fff;
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.5));
 }
