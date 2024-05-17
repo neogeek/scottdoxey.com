@@ -80,7 +80,7 @@
   text-decoration: none;
 }
 
-.social-links i[class^='fa-'] {
+.social-links .font-awesome {
   padding-right: 0.5rem;
-  color: var(--social-icon-color);
+  fill: var(--social-icon-color);
 }

@@ -12,17 +12,17 @@
       {
         "url": "https://play.google.com/store/apps/details?id=com.thelast90percent.flipjacks",
         "label": "Google Play",
-        "icon": "fa-brands fa-google-play"
+        "icon": "googleplay"
       },
       {
         "url": "https://apps.apple.com/app/flip-jacks/id6499108375",
         "label": "iOS App Store",
-        "icon": "fa-brands fa-app-store-ios"
+        "icon": "appstoreios"
       },
       {
         "url": "https://scottdoxey.itch.io/flip-jacks/",
         "label": "Play Game Online",
-        "icon": "fa-brands fa-itch-io"
+        "icon": "itchio"
       },
       {
         "url": "https://flipjacksgame.com/",
@@ -52,7 +52,7 @@
       {
         "url": "https://github.com/neogeek/onlybuild/",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ],
     "image": {
@@ -69,12 +69,12 @@
       {
         "url": "https://github.com/neogeek/rhythm-game-utilities/",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       },
       {
         "url": "/case-study/rhythm-game-prototype/",
         "label": "Case Study",
-        "icon": "fa-solid fa-book"
+        "icon": "book"
       }
     ],
     "video": {
@@ -100,7 +100,7 @@
       {
         "url": "https://github.com/HandcrankEngine/HandcrankEngine/",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ],
     "video": {
@@ -130,7 +130,7 @@
       {
         "url": "https://github.com/neogeek/qr-code-generator/",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ],
     "image": {
@@ -167,7 +167,7 @@
       {
         "url": "https://github.com/neogeek/generate-local-changelog",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ],
     "image": {
@@ -188,7 +188,7 @@
       {
         "url": "https://github.com/CandyCoded/CandyCoded",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ],
     "image": {
@@ -213,7 +213,7 @@
       {
         "url": "https://github.com/docsbydoxdox/doxdox",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ],
     "image": {
@@ -234,12 +234,12 @@
       {
         "url": "https://scottdoxey.itch.io/match-attack",
         "label": "Play Game Online",
-        "icon": "fa-brands fa-itch-io"
+        "icon": "itchio"
       },
       {
         "url": "https://github.com/neogeek/match-attack-ggj-2021",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ],
     "image": {
@@ -264,7 +264,7 @@
       {
         "url": "https://github.com/neogeek/cards-against-undefined",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ],
     "image": {
@@ -285,12 +285,12 @@
       {
         "url": "https://scottdoxey.itch.io/smoothie-operator-unity-port",
         "label": "Play Game Online",
-        "icon": "fa-brands fa-itch-io"
+        "icon": "itchio"
       },
       {
         "url": "https://github.com/neogeek/Smoothie-Operator",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ],
     "video": {
@@ -320,7 +320,7 @@
       {
         "url": "https://github.com/neogeek/topdown",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ],
     "image": {
@@ -337,7 +337,7 @@
       {
         "url": "https://github.com/neogeek/get-unity",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ]
   },
@@ -350,7 +350,7 @@
       {
         "url": "https://github.com/neogeek/create-app",
         "label": "GitHub",
-        "icon": "fa-brands fa-github"
+        "icon": "github"
       }
     ]
   }

@@ -36,6 +36,21 @@ p > img {
   vertical-align: middle;
 }
 
+svg.font-awesome {
+  height: 1em;
+  width: auto;
+  position: relative;
+  top: -0.1em;
+  vertical-align: text-bottom;
+  fill: var(--main-foreground-color);
+  stroke: var(--main-foreground-color);
+}
+
+a svg.font-awesome {
+  fill: var(--link-hover-color);
+  stroke: var(--link-hover-color);
+}
+
 code {
   padding: 0.25rem;
   color: var(--main-foreground-color);

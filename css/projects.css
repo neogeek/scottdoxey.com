@@ -106,7 +106,7 @@
   pointer-events: none;
 }
 
-.project .project-links .button [class^='fa-'] {
+.project .project-links .button .font-awesome {
   margin-right: 0.25rem;
 }
 

@@ -2,6 +2,8 @@ import { html } from 'onlybuild';
 
 import sizeOf from 'image-size';
 
+import * as icons from './images/icons';
+
 import head from './_includes/head.js';
 import header from './_includes/header.js';
 import footer from './_includes/footer.js';
@@ -43,9 +45,10 @@ const renderProjectLinks = project => {
 
   return html`<div class="project-links">
     ${project.links.map(link => {
-      const label = link.icon
-        ? html`<i class="${link.icon}"></i> ${link.label}`
-        : link.label;
+      const label =
+        link.icon && icons[link.icon]
+          ? html`${icons[link.icon]} ${link.label}`
+          : link.label;
 
       if (link.url) {
         return html`<a href="${link.url}" class="button">${label}</a>`;

@@ -1,5 +1,7 @@
 import { html } from 'onlybuild';
 
+import * as icons from '../images/icons';
+
 import socialLinks from './social-links.js';
 
 export default html`<header class="page-header">
@@ -24,7 +26,7 @@ export default html`<header class="page-header">
   <div class="page-bio">
     <p>
       I've released
-      <b>150+ open source projects</b> on <i class="fa-brands fa-github"></i>
+      <b>150+ open source projects</b> on ${icons.github}
       <a href="https://github.com/neogeek">GitHub</a>, I've won awards for 🏆
       <b>Best in VR</b> and 🏆 <b>Best of Accessibility</b> at the 2020
       <img

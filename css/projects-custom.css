@@ -92,6 +92,10 @@
   background-color: rgb(227, 230, 1);
 }
 
+.project#flip-jacks .button .font-awesome {
+  fill: #06311d;
+}
+
 .project#candycoded .project-media {
   align-items: end;
 }
@@ -126,6 +130,10 @@
   background-color: rgb(227, 230, 1);
 }
 
+.project#doxdox .button .font-awesome {
+  fill: #311641;
+}
+
 .project#match-attack {
   color: #fff;
   background-color: #444230;
@@ -147,6 +155,10 @@
   --button-outline-color: var(--itch-button-outline-color);
   --button-outline-active-color: var(--itch-button-outline-active-color);
   background-color: var(--itch-button-background-color);
+}
+
+.project#match-attack .button .font-awesome {
+  fill: #fff;
 }
 
 @media (min-width: 70rem) {
@@ -171,4 +183,8 @@
   --button-outline-color: var(--itch-button-outline-color);
   --button-outline-active-color: var(--itch-button-outline-active-color);
   background-color: var(--itch-button-background-color);
+}
+
+.project#smoothie-operator .button .font-awesome {
+  fill: #fff;
 }

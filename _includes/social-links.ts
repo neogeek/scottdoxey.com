@@ -1,34 +1,36 @@
 import { html } from 'onlybuild';
 
+import * as icons from '../images/icons';
+
 export default html`<ul class="social-links">
   <li>
-    <i class="fa-solid fa-pen-nib"></i>
+    ${icons.pen}
     <a href="https://neogeek.dev">Blog</a>
   </li>
   <li>
-    <i class="fa-brands fa-github"></i>
+    ${icons.github}
     <a href="https://github.com/neogeek">GitHub</a>
   </li>
   <li>
-    <i class="fa-brands fa-linkedin"></i>
+    ${icons.linkedin}
     <a href="https://www.linkedin.com/in/neogeek">LinkedIn</a>
   </li>
   <li>
-    <i class="fa-brands fa-stack-overflow"></i>
+    ${icons.stackoverflow}
     <a href="https://stackoverflow.com/users/135018/scott-doxey"
       >Stack Overflow</a
     >
   </li>
   <li>
-    <i class="fa-brands fa-speaker-deck"></i>
+    ${icons.speakerdeck}
     <a href="https://speakerdeck.com/neogeek">Speaker Deck</a>
   </li>
   <li>
-    <i class="fa-brands fa-dribbble"></i>
+    ${icons.dribbble}
     <a href="https://dribbble.com/neogeek">Dribbble</a>
   </li>
   <li>
-    <i class="fa-brands fa-itch-io"></i>
+    ${icons.itchio}
     <a href="https://scottdoxey.itch.io/">Itch.io</a>
   </li>
 </ul>`;
