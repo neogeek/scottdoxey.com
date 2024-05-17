@@ -18,7 +18,7 @@ const renderProjectIcon = project => {
   return html`<img
     src="${project.icon.src}"
     width=${size.width}
-    width=${size.width}
+    height=${size.height}
     class="project-icon"
     alt="${project.icon.alt}"
   />`;
