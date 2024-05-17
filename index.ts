@@ -96,11 +96,12 @@ const renderProjectMediaVideo = project => {
       loop
       muted
       playsinline
-      preload
+      preload="none"
       poster="${project.video.poster}"
     >
       ${project.video.sources?.map(
-        source => html`<source src="${source.src}" type="${source.type}" />`
+        source =>
+          html`<source data-src="${source.src}" type="${source.type}" />`
       )}
     </video>
   </figure>`;
@@ -131,5 +132,6 @@ export default html`<!DOCTYPE html>
           .map(renderProject)}
       </div>
       ${footer}
+      <script src="js/load-video.js"></script>
     </body>
   </html>`;
