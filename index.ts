@@ -1,21 +1,32 @@
 import { html } from 'onlybuild';
 
+import sizeOf from 'image-size';
+
 import head from './_includes/head.js';
 import header from './_includes/header.js';
 import footer from './_includes/footer.js';
 
 import projectData from './_data/projects.json' assert { type: 'json' };
 
+const renderProjectIcon = project => {
+  if (!project.icon) {
+    return '';
+  }
+
+  const size = sizeOf(project.icon.src);
+
+  return html`<img
+    src="${project.icon.src}"
+    width=${size.width}
+    width=${size.width}
+    class="project-icon"
+    alt="${project.icon.alt}"
+  />`;
+};
+
 const renderProjectDetails = project => {
   return html`<div class="project-details">
-    ${project.icon
-      ? html`<img
-          src="${project.icon.src}"
-          width="100"
-          class="project-icon"
-          alt="${project.icon.alt}"
-        />`
-      : ''}
+    ${renderProjectIcon(project)}
     <h2>
       ${project.url
         ? html`<a href="${project.url}">${project.name}</a>`
@@ -50,6 +61,8 @@ const renderProjectMediaImage = project => {
     return '';
   }
 
+  const size = sizeOf(project.image.src);
+
   return html`<figure class="project-media">
     <picture class="dropshadow">
       ${project.image.sources?.length > 0
@@ -58,7 +71,12 @@ const renderProjectMediaImage = project => {
               html`<source srcset="${source.srcset}" media="${source.media}" />`
           )
         : ''}
-      <img src="${project.image.src}" alt="${project.image.alt}" width="600" />
+      <img
+        src="${project.image.src}"
+        alt="${project.image.alt}"
+        width="${size.width}"
+        height="${size.height}"
+      />
     </picture>
   </figure>`;
 };

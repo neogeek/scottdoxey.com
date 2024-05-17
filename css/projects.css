@@ -51,6 +51,8 @@
 
 .project .project-details .project-icon {
   margin-bottom: 1rem;
+  max-width: 100px;
+  height: auto;
 }
 
 .project .project-details h2 a {
