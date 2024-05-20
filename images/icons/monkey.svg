@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
 
     <clipPath id="split-left">
-        <rect x="0" y="0" width="50%" height="100%" />
+        <rect x="0" y="0" width="250" height="100%" />
     </clipPath>
 
     <clipPath id="split-right">
-        <rect x="50%" y="0" width="50%" height="100%" />
+        <rect x="250" y="0" width="250" height="100%" />
     </clipPath>
 
     <!-- background -->
