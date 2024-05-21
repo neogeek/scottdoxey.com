@@ -2,7 +2,7 @@ import { html } from 'onlybuild';
 
 import * as icons from '../images/icons';
 
-export default html`<ul class="social-links">
+export default html`<ul class="links">
   <li>
     ${icons.pen}
     <a href="https://neogeek.dev">Blog</a>

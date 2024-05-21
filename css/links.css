@@ -1,0 +1,28 @@
+.links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin: 1rem auto;
+  max-width: 50rem;
+}
+
+.links a {
+  color: var(--link-color);
+  font-weight: 600;
+}
+
+.links a:active,
+.links a:hover {
+  color: var(--link-hover-color);
+  background-color: var(--link-color);
+  text-decoration: none;
+}
+
+.links .font-awesome {
+  padding-right: 0.5rem;
+  fill: var(--social-icon-color);
+}

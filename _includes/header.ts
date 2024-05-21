@@ -2,7 +2,7 @@ import { html } from 'onlybuild';
 
 import * as icons from '../images/icons';
 
-import socialLinks from './social-links.js';
+import links from './links.js';
 
 export default html`<header class="page-header">
     <img
@@ -55,4 +55,4 @@ export default html`<header class="page-header">
     </p>
   </div>
 
-  <nav class="page-nav">${socialLinks}</nav>`;
+  <nav class="page-nav">${links}</nav>`;
