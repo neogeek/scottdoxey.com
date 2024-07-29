@@ -10,7 +10,9 @@ import footer from './_includes/footer.js';
 
 import projectData from './_data/projects.json' assert { type: 'json' };
 
-const renderProjectIcon = project => {
+type ArrayItemType<T> = T extends (infer U)[] ? U : never;
+
+const renderProjectIcon = (project: ArrayItemType<typeof projectData>) => {
   if (!project.icon) {
     return '';
   }
@@ -26,7 +28,7 @@ const renderProjectIcon = project => {
   />`;
 };
 
-const renderProjectDetails = project => {
+const renderProjectDetails = (project: ArrayItemType<typeof projectData>) => {
   return html`<div class="project-details">
     ${renderProjectIcon(project)}
     <h2>
@@ -38,7 +40,7 @@ const renderProjectDetails = project => {
   </div>`;
 };
 
-const renderProjectLinks = project => {
+const renderProjectLinks = (project: ArrayItemType<typeof projectData>) => {
   if (!project.links?.length) {
     return '';
   }
@@ -59,7 +61,9 @@ const renderProjectLinks = project => {
   </div>`;
 };
 
-const renderProjectMediaImage = project => {
+const renderProjectMediaImage = (
+  project: ArrayItemType<typeof projectData>
+) => {
   if (!project.image) {
     return '';
   }
@@ -68,7 +72,7 @@ const renderProjectMediaImage = project => {
 
   return html`<figure class="project-media">
     <picture class="dropshadow">
-      ${project.image.sources?.length > 0
+      ${project.image.sources && project.image.sources.length > 0
         ? project.image.sources.map(
             source =>
               html`<source srcset="${source.srcset}" media="${source.media}" />`
@@ -84,7 +88,9 @@ const renderProjectMediaImage = project => {
   </figure>`;
 };
 
-const renderProjectMediaVideo = project => {
+const renderProjectMediaVideo = (
+  project: ArrayItemType<typeof projectData>
+) => {
   if (!project.video) {
     return '';
   }
@@ -107,7 +113,7 @@ const renderProjectMediaVideo = project => {
   </figure>`;
 };
 
-const renderProject = project => {
+const renderProject = (project: ArrayItemType<typeof projectData>) => {
   return html`<section class="project" id="${project.id}">
     ${renderProjectDetails(project)} ${renderProjectLinks(project)}
     ${renderProjectMediaImage(project)} ${renderProjectMediaVideo(project)}
