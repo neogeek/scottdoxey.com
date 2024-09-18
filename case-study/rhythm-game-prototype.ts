@@ -24,6 +24,6 @@ export default html`<!DOCTYPE html>
           await readFile('./case-study/rhythm-game-prototype.md', 'utf8')
         )}
       </main>
-      <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@11.2.1/dist/mermaid.min.js"></script>
     </body>
   </html>`;
