@@ -128,7 +128,7 @@ graph LR;
     end
 
     convertSamplesToWaveformCpp-->convertSamplesToWaveformCsharp
-    convertSamplesToWaveformCsharp-->unity
+    convertSamplesToWaveformCsharp-->renderWaveformToTexture
 </pre>
 
 ## Results
