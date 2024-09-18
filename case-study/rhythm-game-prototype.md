@@ -6,86 +6,137 @@
 
 ## Summary
 
-I've been fascinated with music games for a very long time. From my first time playing [Tap Tap Revenge](https://en.wikipedia.org/wiki/Tap_Tap_Revenge) on my first iPod Touch to the countless hours I've played either Guitar Hero or Rock Band with friends. Because of this fascination, it makes sense that I would find myself building a game with a music component.
+I've been fascinated with music games for ages. From my first time playing [Tap Tap Revenge](https://en.wikipedia.org/wiki/Tap_Tap_Revenge) on the original iPod Touch to the countless hours I've played either Guitar Hero or Rock Band with friends. Because of this fascination, it makes sense that I would find myself building a game with a rhythm component.
 
 ## Objectives
 
-My main objective was to be able to build a small core set of features:
+I had three main objectives for this project:
 
-- Parse a file containing notes
-- Display those notes on a track
-- Sync the track movement with the audio file associated with it
-- Capture player input and detect if a note was hit
+1. [Render notes](#render-notes) that move in sync with an audio file
+1. [Capture input](#capture-input) from multiple device types
+1. Code should run in [multiple game engines](#game-engine-support)
 
-My secondary objective was to make it so you could use any device to play the game. This could prove to be very complicated as it would require a lot of manual testing on devices. The current list of devices:
+### 1. Render Notes
 
-- Keyboard
-- Gamepad Controller
-- MIDI Controller (keyboard/drum/etc)
-- Guitar Hero / Rock Band Guitars
+In order to render notes, a few things need to happen:
+
+- Parse a file containing information about the song, including the notes
+- Calculate the position of the notes in 2D or 3D space
+- Sync the note position with the playback of an audio file
+
+### 2. Capture Input
+
+For the game to be playable, once the notes are rendered and the audio is playing, player input would need to be captured from the following devices:
+
+- Keyboard/Mouse
+- Controller
+- MIDI Device
+- Guitar Hero/Rock Band Guitar
 - DDR Pads
+
+### 3. Game Engine Support
+
+And so that I wasn't limited to one game engine; I wanted the code to be as portable as possible. To do this, I first built the plugin in C++, then for engines like Unity or Godot (with dotnet), I wrote C# code for marshalling data back and forth to the existing C++ logic.
 
 ## Implementation
 
-To create this prototype, I had one specific requirement I wanted to adhere to: create as much of the logic in C++ and C# as possible. This would allow the majority of the project to be built and tested outside of Unity. It would also have the added benefit of being portable to other engines.
+The current architecture for this project (Unity specifically) looks like this:
 
-I also wanted to make sure the song files were stable. At first, I started authoring song files based on a custom file format I created. I quickly realized what I was building wouldn't cut it and needed to be reworked. While looking for inspiration online, I learned about Clone Hero, a rhythm game similar to Guitar Hero and Rock Band, and their custom file format: chart files. The more I learned about them, the more I realized they were my prototype's only choice for storing songs.
-
-The basic architecture for this prototype would look like this:
+### Rendering Notes
 
 <pre class="mermaid">
 graph LR;
-    chartFile["Chart File"]
-    chartFileParserCpp["Chart File Parser"]
-    chartFileParserCsharp["Chart File Parser"]
-    chartFileRender["Chart File Renderer"]
+    file["song.chart"]
 
-    audioFile["Audio File"]
-    audioFileWaveformParserCpp["Audio File Waveform Parser"]
-    audioFileWaveformParserCsharp["Audio File Waveform Parser"]
-    audioFileWaveformRenderer["Audio File Waveform Renderer"]
+    file-->parseSectionsFromChartCpp
 
-    trackRenderer["Track Renderer"]
+    subgraph cppLibrary ["C++ Library"]
+        parseSectionsFromChartCpp["ParseSectionsFromChart()"]
+        parseBpmFromChartSectionCpp["ParseBpmFromChartSection()"]
+        parseNotesFromChartSectionCpp["ParseNotesFromChartSection()"]
+        parseLyricsFromChartSectionCpp["ParseLyricsFromChartSection()"]
 
-    userInput["User Input"]
-    userInputCheck["User Input Check"]
+        calculateBeatBarsCpp["CalculateBeatBars()"]
 
-    subgraph cpp ["C++"]
-        chartFileParserCpp
-        audioFileWaveformParserCpp
+        convertTickToPositionCpp["ConvertTickToPosition()"]
+        isOnTheBeatCpp["IsOnTheBeat()"]
+
+        parseSectionsFromChartCpp
+        parseBpmFromChartSectionCpp
+        parseNotesFromChartSectionCpp
+        parseLyricsFromChartSectionCpp
+
+        calculateBeatBarsCpp
+
+        convertTickToPositionCpp
+        isOnTheBeatCpp
     end
 
-    subgraph csharp ["C#"]
-        chartFileParserCsharp
-        audioFileWaveformParserCsharp
+    subgraph csharpLibrary ["C# Plugin"]
+        songParseFromFileCsharp["Song.ParseFromFile()"]
+
+        calculateBeatBarsCsharp["CalculateBeatBars()"]
+
+        convertTickToPositionCsharp["ConvertTickToPosition()"]
+        isOnTheBeatCsharp["IsOnTheBeat()"]
+
+        calculateBeatBarsCsharp
+
+        convertTickToPositionCsharp
+        isOnTheBeatCsharp
     end
 
-    subgraph unity ["Unity"]
-        chartFileRender
-        audioFileWaveformRenderer
-        trackRenderer
-        userInput
-        userInputCheck
+    subgraph unityProject ["Unity Project"]
+        renderNotesInScene["Render Notes in Scene"]
+        renderBeatBarsInScene["Render Beat Bars in Scene"]
+        renderTrackInScene["Render Track in Scene"]
     end
 
-    chartFile-->chartFileParserCsharp
-    audioFile-->audioFileWaveformParserCsharp
+    parseSectionsFromChartCpp-->parseBpmFromChartSectionCpp
+    parseSectionsFromChartCpp-->parseNotesFromChartSectionCpp
+    parseSectionsFromChartCpp-->parseLyricsFromChartSectionCpp
 
-    chartFileParserCpp-->chartFileParserCsharp
-    chartFileParserCsharp-->chartFileRender
-    audioFileWaveformParserCpp-->audioFileWaveformParserCsharp
-    audioFileWaveformParserCsharp-->audioFileWaveformRenderer
+    parseSectionsFromChartCpp-->songParseFromFileCsharp
 
-    chartFileRender-->trackRenderer
-    audioFileWaveformRenderer-->trackRenderer
+    calculateBeatBarsCpp-->calculateBeatBarsCsharp
+    convertTickToPositionCpp-->convertTickToPositionCsharp
+    isOnTheBeatCpp-->isOnTheBeatCsharp
 
-    userInput-->userInputCheck
-    chartFileParserCsharp-->userInputCheck
+    songParseFromFileCsharp-->renderNotesInScene
+    songParseFromFileCsharp-->renderBeatBarsInScene
+    songParseFromFileCsharp-->renderTrackInScene
+</pre>
+
+### Rendering Audio Frequency
+
+<pre class="mermaid">
+graph LR;
+    file["song.ogg"]
+
+    file-->convertSamplesToWaveformCpp
+
+    subgraph cppLibrary ["C++ Library"]
+        convertSamplesToWaveformCpp["ConvertSamplesToWaveform()"]
+    end
+
+    subgraph csharpLibrary ["C# Plugin"]
+        convertSamplesToWaveformCsharp["ConvertSamplesToWaveform()"]
+    end
+
+    subgraph unityProject ["Unity Project"]
+        renderWaveformToTexture["Render Waveform to Texture"]
+    end
+
+    convertSamplesToWaveformCpp-->convertSamplesToWaveformCsharp
+    convertSamplesToWaveformCsharp-->unity
 </pre>
 
 ## Results
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WSMoc8Y1FOE?si=yG__n1fUNcQMQ2_n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+1. https://github.com/neogeek/rhythm-game-utilities/
+1. https://github.com/neogeek/tiny-midi
 
 ## Challenges and Solutions
 
