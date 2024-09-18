@@ -4,6 +4,10 @@ import { html } from 'onlybuild';
 
 import { marked } from 'marked';
 
+import { gfmHeadingId } from 'marked-gfm-heading-id';
+
+marked.use(gfmHeadingId());
+
 import head from '../_includes/head.js';
 
 export default html`<!DOCTYPE html>
