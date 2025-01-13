@@ -16,6 +16,10 @@ export default html`<ul class="links">
     <a href="https://www.linkedin.com/in/neogeek">LinkedIn</a>
   </li>
   <li>
+    ${icons.bluesky}
+    <a href="https://bsky.app/profile/scottdoxey.com">Bluesky</a>
+  </li>
+  <li>
     ${icons.stackoverflow}
     <a href="https://stackoverflow.com/users/135018/scott-doxey"
       >Stack Overflow</a
