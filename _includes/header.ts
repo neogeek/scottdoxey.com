@@ -15,8 +15,8 @@ export default html`<header class="page-header">
       alt="Picture of Scott and his cat Ada"
     />
     <div>
-      <h1>Hi! 👋 My name is Scott.</h1>
-      <h2>
+      <h1 class="speech-bubble">Hi! 👋 My name is Scott.</h1>
+      <h2 class="speech-bubble">
         I'm a <b>game</b>, <b>web</b>, and <b>open-source tool</b>
         developer and designer.
       </h2>

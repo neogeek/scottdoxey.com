@@ -10,6 +10,7 @@
   gap: 1rem 2rem;
   align-items: center;
   flex-direction: column;
+  clear: none;
 }
 
 @media (min-width: 70rem) {
@@ -23,15 +24,49 @@
 }
 
 .page-header h1 {
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   line-height: 1;
   font-weight: 600;
 }
 
+.page-header h1.speech-bubble::before {
+  position: absolute;
+  left: calc(50vw - 100px + 1rem);
+  top: -2.5rem;
+  content: '';
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  background-size: contain;
+  background-image: url('/images/speech-bubble-arrow-top.svg');
+  background-repeat: no-repeat;
+  z-index: -999;
+}
+
+@media (min-width: 70rem) {
+  .page-header h1.speech-bubble::before {
+    left: -1rem;
+    bottom: -5rem;
+    top: unset;
+    background-image: url('/images/speech-bubble-arrow-left.svg');
+  }
+}
+
 .page-header h2 {
-  padding-top: 0.5rem;
+  float: right;
+  margin-top: 0.5rem;
   line-height: 1;
   font-weight: 400;
+}
+
+.page-header .speech-bubble {
+  position: relative;
+  display: inline-block;
+  padding: 1.25rem;
+  color: #000;
+  border: 0.25rem solid #000;
+  border-radius: 1rem;
+  background-color: #fff;
 }
 
 @media (min-width: 70rem) {
