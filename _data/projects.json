@@ -1,5 +1,62 @@
 [
   {
+    "id": "rhythm-game-utilities",
+    "url": "https://github.com/neogeek/rhythm-game-utilities",
+    "name": "Rhythm Game Utilities",
+    "description": "This library is a collection of utilities for creating rhythm games like Tap Tap Revenge, Guitar Hero, and Rock Band. It is meant to be used within any game engine that supports loading C++ libraries, such as Unity, Unreal, Godot, SDL, and MonoGame.",
+    "links": [
+      {
+        "url": "https://github.com/neogeek/rhythm-game-utilities/",
+        "label": "GitHub",
+        "icon": "github"
+      },
+      {
+        "url": "/case-study/rhythm-game-prototype/",
+        "label": "Case Study",
+        "icon": "book"
+      }
+    ],
+    "video": {
+      "poster": "./images/projects/rhythm-game-utilities/rhythm-game-utilities-demo.webp",
+      "sources": [
+        {
+          "src": "./images/projects/rhythm-game-utilities/rhythm-game-utilities-demo.webm",
+          "type": "video/webm"
+        },
+        {
+          "src": "./images/projects/rhythm-game-utilities/rhythm-game-utilities-demo.mp4",
+          "type": "video/mp4"
+        }
+      ]
+    }
+  },
+  {
+    "id": "handcrank-engine",
+    "url": "https://github.com/HandcrankEngine/HandcrankEngine/",
+    "name": "Handcrank Engine",
+    "description": "Handcrank is a game engine built in C++ on top of SDL with a focus on a simple, Unity GameObject-like object class structure inheritance. Handcrank is currently in active development.",
+    "links": [
+      {
+        "url": "https://github.com/HandcrankEngine/HandcrankEngine/",
+        "label": "GitHub",
+        "icon": "github"
+      }
+    ],
+    "video": {
+      "poster": "./images/projects/handcrank-engine/handcrank-demo.webp",
+      "sources": [
+        {
+          "src": "./images/projects/handcrank-engine/handcrank-demo.webm",
+          "type": "video/webm"
+        },
+        {
+          "src": "./images/projects/handcrank-engine/handcrank-demo.mp4",
+          "type": "video/mp4"
+        }
+      ]
+    }
+  },
+  {
     "id": "flip-jacks",
     "url": "https://flipjacksgame.com/",
     "name": "Flip Jacks",
@@ -54,63 +111,6 @@
     "image": {
       "src": "./images/projects/onlybuild/readme.webp",
       "alt": "Screenshot of the README.md for the onlybuild repo detailing the features included in the project."
-    }
-  },
-  {
-    "id": "rhythm-game-utilities",
-    "url": "https://github.com/neogeek/rhythm-game-utilities",
-    "name": "Rhythm Game Utilities",
-    "description": "This library is a collection of utilities for creating rhythm games like Tap Tap Revenge, Guitar Hero, and Rock Band. It is meant to be used within any game engine that supports loading C++ libraries, such as Unity, Unreal, and Godot.",
-    "links": [
-      {
-        "url": "https://github.com/neogeek/rhythm-game-utilities/",
-        "label": "GitHub",
-        "icon": "github"
-      },
-      {
-        "url": "/case-study/rhythm-game-prototype/",
-        "label": "Case Study",
-        "icon": "book"
-      }
-    ],
-    "video": {
-      "poster": "./images/projects/rhythm-game-utilities/rhythm-game-utilities-demo.webp",
-      "sources": [
-        {
-          "src": "./images/projects/rhythm-game-utilities/rhythm-game-utilities-demo.webm",
-          "type": "video/webm"
-        },
-        {
-          "src": "./images/projects/rhythm-game-utilities/rhythm-game-utilities-demo.mp4",
-          "type": "video/mp4"
-        }
-      ]
-    }
-  },
-  {
-    "id": "handcrank-engine",
-    "url": "https://github.com/HandcrankEngine/HandcrankEngine/",
-    "name": "Handcrank Engine",
-    "description": "Handcrank is a game engine built in C++ on top of SDL with a focus on a simple, Unity GameObject-like object class structure inheritance. Handcrank is currently in active development.",
-    "links": [
-      {
-        "url": "https://github.com/HandcrankEngine/HandcrankEngine/",
-        "label": "GitHub",
-        "icon": "github"
-      }
-    ],
-    "video": {
-      "poster": "./images/projects/handcrank-engine/handcrank-demo.webp",
-      "sources": [
-        {
-          "src": "./images/projects/handcrank-engine/handcrank-demo.webm",
-          "type": "video/webm"
-        },
-        {
-          "src": "./images/projects/handcrank-engine/handcrank-demo.mp4",
-          "type": "video/mp4"
-        }
-      ]
     }
   },
   {
