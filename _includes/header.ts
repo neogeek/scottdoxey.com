@@ -47,10 +47,34 @@ export default html`<header class="page-header">
         alt="Purple Monkey Game Jam Logo"
         loading="eager"
       />
-      <a href="https://purplemonkeygamejam.com">Purple Monkey Game Jam</a>,
-      given talks at
+      <a href="https://purplemonkeygamejam.com">Purple Monkey Game Jam</a> and a
+      <img
+        src="./images/icons/ggj.svg"
+        width="30"
+        height="30"
+        alt="Global Game Jam Logo"
+        loading="eager"
+      />
+      <a href="https://globalgamejam.org/">Global Game Jam</a> site, given talks
+      at
+      <img
+        src="./images/icons/boston-game-dev.png"
+        width="30"
+        height="30"
+        alt="Boston Game Dev Logo"
+        loading="eager"
+      />
       <a href="https://www.meetup.com/bostongamedev/">Boston Game Dev</a>
-      meetups, and I just released my first game for mobile platforms called 🃏
+      meetups, a workshop at
+      <img
+        src="./images/icons/godotcon-boston.svg"
+        width="30"
+        height="30"
+        alt="GodotCon Boston Logo"
+        loading="eager"
+      />
+      <a href="https://conference.godotengine.org/2025/">GodotCon Boston</a>,
+      and I just released my first game for mobile platforms called 🃏
       <a href="https://flipjacksgame.com">Flip Jacks</a>.
     </p>
   </div>

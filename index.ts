@@ -1,6 +1,6 @@
 import { html } from 'onlybuild';
 
-import sizeOf from 'image-size';
+import { imageSizeFromFile } from 'image-size/fromFile';
 
 import * as icons from './images/icons';
 
@@ -12,12 +12,14 @@ import projectData from './_data/projects.json' assert { type: 'json' };
 
 type ArrayItemType<T> = T extends (infer U)[] ? U : never;
 
-const renderProjectIcon = (project: ArrayItemType<typeof projectData>) => {
+const renderProjectIcon = async (
+  project: ArrayItemType<typeof projectData>
+) => {
   if (!project.icon) {
     return '';
   }
 
-  const size = sizeOf(project.icon.src);
+  const size = await imageSizeFromFile(project.icon.src);
 
   return html`<img
     src="${project.icon.src}"
@@ -28,9 +30,11 @@ const renderProjectIcon = (project: ArrayItemType<typeof projectData>) => {
   />`;
 };
 
-const renderProjectDetails = (project: ArrayItemType<typeof projectData>) => {
+const renderProjectDetails = async (
+  project: ArrayItemType<typeof projectData>
+) => {
   return html`<div class="project-details">
-    ${renderProjectIcon(project)}
+    ${await renderProjectIcon(project)}
     <h2>
       ${project.url
         ? html`<a href="${project.url}">${project.name}</a>`
@@ -61,14 +65,14 @@ const renderProjectLinks = (project: ArrayItemType<typeof projectData>) => {
   </div>`;
 };
 
-const renderProjectMediaImage = (
+const renderProjectMediaImage = async (
   project: ArrayItemType<typeof projectData>
 ) => {
   if (!project.image) {
     return '';
   }
 
-  const size = sizeOf(project.image.src);
+  const size = await imageSizeFromFile(project.image.src);
 
   return html`<figure class="project-media">
     <picture class="dropshadow">
@@ -113,10 +117,11 @@ const renderProjectMediaVideo = (
   </figure>`;
 };
 
-const renderProject = (project: ArrayItemType<typeof projectData>) => {
+const renderProject = async (project: ArrayItemType<typeof projectData>) => {
   return html`<section class="project" id="${project.id}">
-    ${renderProjectDetails(project)} ${renderProjectLinks(project)}
-    ${renderProjectMediaImage(project)} ${renderProjectMediaVideo(project)}
+    ${await renderProjectDetails(project)} ${renderProjectLinks(project)}
+    ${await renderProjectMediaImage(project)}
+    ${renderProjectMediaVideo(project)}
   </section>`;
 };
 
@@ -128,14 +133,18 @@ export default html`<!DOCTYPE html>
     <body>
       ${header}
       <main class="projects-main">
-        ${projectData
-          .filter(project => project.image || project.video)
-          .map(renderProject)}
+        ${await Promise.all(
+          projectData
+            .filter(project => project.image || project.video)
+            .map(renderProject)
+        )}
       </main>
       <div class="projects-mini">
-        ${projectData
-          .filter(project => !project.image && !project.video)
-          .map(renderProject)}
+        ${await Promise.all(
+          projectData
+            .filter(project => !project.image && !project.video)
+            .map(renderProject)
+        )}
       </div>
       ${footer}
       <script src="js/load-video.js" defer></script>
