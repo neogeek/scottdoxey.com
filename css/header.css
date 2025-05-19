@@ -29,25 +29,31 @@
   font-weight: 600;
 }
 
+.page-header h1.speech-bubble {
+  margin-top: 2rem;
+}
+
 .page-header h1.speech-bubble::before {
   position: absolute;
-  left: calc(50vw - 100px + 1rem);
-  top: -2.5rem;
+  left: calc(50vw - 4.5rem);
+  top: -3.5rem;
   content: '';
   display: inline-block;
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   background-size: contain;
   background-image: url('/images/speech-bubble-arrow-top.svg');
   background-repeat: no-repeat;
-  z-index: -999;
+  z-index: 0;
 }
 
 @media (min-width: 70rem) {
   .page-header h1.speech-bubble::before {
     left: -1rem;
-    bottom: -5rem;
     top: unset;
+    bottom: -5.8rem;
+    width: 6rem;
+    height: 6rem;
     background-image: url('/images/speech-bubble-arrow-left.svg');
   }
 }
