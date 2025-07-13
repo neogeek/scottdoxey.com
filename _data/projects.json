@@ -1,5 +1,32 @@
 [
   {
+    "id": "godot-workshop",
+    "url": "https://www.youtube.com/watch?v=JqL_oZ9SG7Q",
+    "name": "GodotCon Boston 2025 - Building a Godot Plugin with GDExtension",
+    "description": "Learn how to write a plugin for Godot using C++, build for distribution as a GDExtension, write unit tests and setup test and build automations via GitHub Actions.",
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=JqL_oZ9SG7Q",
+        "label": "YouTube",
+        "icon": "youtube"
+      },
+      {
+        "url": "https://neogeek.dev/talks/building-a-godot-plugin-with-gdextension/",
+        "label": "Slides",
+        "icon": "book"
+      },
+      {
+        "url": "https://conference.godotengine.org/2025/",
+        "label": "GodotCon Boston",
+        "icon": "godotcon_boston"
+      }
+    ],
+    "image": {
+      "src": "./images/projects/godotcon-workshop/cover.jpg",
+      "alt": "Cover photo of YouTube video."
+    }
+  },
+  {
     "id": "rhythm-game-utilities",
     "url": "https://github.com/neogeek/rhythm-game-utilities",
     "name": "Rhythm Game Utilities",
