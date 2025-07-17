@@ -72,6 +72,10 @@
         "url": "https://github.com/HandcrankEngine/pong-demo",
         "label": "Demo Game",
         "icon": "github"
+      },
+      {
+        "url": "https://handcrankengine.com",
+        "label": "Website"
       }
     ],
     "video": {
