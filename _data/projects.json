@@ -1,5 +1,32 @@
 [
   {
+    "id": "bgw-minicon-2026-how-to-build",
+    "url": "https://www.youtube.com/watch?v=q1GLGHx4TFs",
+    "name": "BGW MiniCon 2026 - How to Build a Rhythm Game in (Almost) Every Game Engine",
+    "description": "This talk goes over how to build a rhythm game in (almost) any game engine using a plugin I've been building for Unity, Unreal, Godot, etc.",
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=q1GLGHx4TFs",
+        "label": "YouTube",
+        "icon": "youtube"
+      },
+      {
+        "url": "https://neogeek.dev/talks/how-to-build-a-rhythm-game-in-almost-any-game-engine/",
+        "label": "Slides",
+        "icon": "book"
+      },
+      {
+        "url": "https://gamedev.boston/",
+        "label": "Boston Game Dev Week",
+        "icon": "boston-game-dev"
+      }
+    ],
+    "image": {
+      "src": "./images/projects/bgw-minicon-2026/cover.jpg",
+      "alt": "Cover photo of YouTube video."
+    }
+  },
+  {
     "id": "godot-workshop",
     "url": "https://www.youtube.com/watch?v=JqL_oZ9SG7Q",
     "name": "GodotCon Boston 2025 - Building a Godot Plugin with GDExtension",
